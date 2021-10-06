@@ -37,7 +37,7 @@
     <link href="/2021/09/17/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/"/>
     <url>/2021/09/17/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</url>
     
-    <content type="html"><![CDATA[<h1 id="第1章-函数"><a href="#第1章-函数" class="headerlink" title="第1章 函数"></a>第1章 函数</h1><p>1.描述集合中元素的方式：枚举法、属性法。<br>2.有理数有序的定义：</p><script type="math/tex; mode=display">对于任意x,y\in \mathbb{Q}，x<y,x=y,x>y有且仅有一个成立</script><p>3.有理数集可数的定义：</p><script type="math/tex; mode=display">\mathbb{Q}与自然数集\mathbb{N}能建立双射。</script><p>4.有理数稠密性的定义：</p><script type="math/tex; mode=display">\forall a,b\in \mathbb{Q},a<b,\exists c \in \mathbb{Q},使得a<c<b</script><p>5.无理数也是稠密的<br>6.实数的连续性：<br>实数与数轴上的点一一对应<br>7.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="第1章-函数"><a href="#第1章-函数" class="headerlink" title="第1章 函数"></a>第1章 函数</h1><p>1.描述集合中元素的方式：枚举法、属性法。<br>2.逻辑符号：略<br>3.数域的定义：设P是由一些复数组成的集合，其中包括0与1，如果P中任意两个数的和、差、积、商（除数不为0）仍是P中的数，则称P为一个数域。<br>    扩展：“包括0与1”可以改成“包括0与x”<br>4.有理数有序的定义：</p><script type="math/tex; mode=display">对于任意x,y\in \mathbb{Q}，x<y,x=y,x>y有且仅有一个成立$$​5.有理数集可数的定义：$$\mathbb{Q}与自然数集\mathbb{N}能建立双射。</script><p>6.有理数稠密性的定义：</p><script type="math/tex; mode=display">\forall a,b\in \mathbb{Q},a<b,\exists c \in \mathbb{Q},使得a<c<b</script><p>7.无理数也是稠密的<br>8.实数的连续性：<br>实数与数轴上的点一一对应<br>或者<br>任意两个实数“中间”的数都是实数<br>9.[去心]领域的定义：略<br>10.ALG不等式：略<br>11.伯努利不等式：设实数$x&gt;-1$，$a\ge 1$，则$(1+x)^a\ge 1+ax$<br>12.数列有界的定义：<br>$\exists M&gt;0,\forall n \in \mathbb{N}^{+}:|x_n|\le M$<br>否命题的正面描述<br>$\forall M&gt;0,\exists n \in \mathbb{N}^{+}:|x_n|&gt; M$</p>]]></content>
     
     
     <categories>
