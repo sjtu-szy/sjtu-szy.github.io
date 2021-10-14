@@ -314,7 +314,7 @@ a_{m,n}=n-m\\
 <p>12.无穷大的倒数为无穷小</p>
 <p>13.无穷大量一定无界，反过来不成立<br>事实上，数列无界的充要条件是数列存在子列为无穷大。</p>
 <p>14.正无穷大量的相反数是负无穷大量</p>
-<p>15.有限个无穷大的和/积是无穷大<br>无限个无穷大的和/积不一定是无穷大</p>
+<p>15.有限个无穷大的和/积是无穷大<br>无限个无穷大的和/积不一定是无穷大<br>有界量乘无穷大<strong>不一定</strong>是无穷大<br><strong>非零</strong>有界量乘无穷大是无穷大</p>
 <p>16.数列极限的唯一性：略</p>
 <p>17.收敛数列的有界性：略</p>
 <p>18.减少（增加）数列的有限项，收敛性不变。</p>
@@ -361,6 +361,82 @@ n=(1+x_n)^n=1+C_n^1x_n+C_n^2x_n^2+\cdots+x_n^n>\frac{n(n-1)}{2}x_n^2</script><p>
 <li>$\lim_{x\to a}\frac{\sin{x}-\sin{a}}{x-a}=\cos{a}$</li>
 </ul>
 <p>42.幂指函数$f(x)^{g(x)}$的极限的计算<br><img src="https://i.loli.net/2021/10/10/y1GIUtf8iB3csMu.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>43.一个奇怪的技巧</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\\
+=&\lim_{x\to 0}\frac{\ln(1-x)+x}{x^2}\\
+=&\lim_{x\to 0}\frac{\ln(1+x)-x}{2x^2}+\lim_{x\to 0}\frac{\ln(1-x)+x}{2x^2}\\
+=&\lim_{x\to 0}\frac{\ln(1-x^2)}{2x^2}\\
+=&-\frac{1}{2}
+\end{align}</script><p>44.无穷小的比较<br>设  $\lim_{x \rightarrow \Delta} f(x)=\lim_{x \rightarrow \Delta} g(x)=0, \lim_{x \rightarrow \Delta} \frac{f(x)}{g(x)}=l$<br>(1)若$l=0$，则称$x \rightarrow \Delta$时$\beta(x)$是比$\alpha(x)$<strong>高阶的无穷小</strong>，记为</p>
+<script type="math/tex; mode=display">
+\beta(x)=o(\alpha(x))\quad (x \rightarrow \Delta)</script><p>(2)若$l\ne 0$，则称$x \rightarrow \Delta$时$\beta(x)$是与$\alpha(x)$<strong>同阶的无穷小</strong>，记为</p>
+<script type="math/tex; mode=display">
+\beta(x)=O(\alpha(x))\quad (x \rightarrow \Delta)</script><p>特别地，若$l\ne 1$，则称$x \rightarrow \Delta$时$\beta(x)$是与$\alpha(x)$<strong>等价的无穷小</strong>，记为</p>
+<script type="math/tex; mode=display">
+\beta(x)\sim\alpha(x)\quad (x \rightarrow \Delta)</script><p>注：$f(x)=o(1)$表示$f(x)$在$x \rightarrow \Delta$时为无穷小</p>
+<p>45.定义：若$\lim_{x \rightarrow a} f(x)=0$，且存在常数$c\ne 0,k&gt;0:\lim_{x \rightarrow a} \frac{f(x)}{(x-a)^{k}}=c$，则称当$x \rightarrow a$时，$f(x)$是标准无穷小$x-a$的$k$阶无穷小，简称$f(x)$是阶无穷小，而称$c(x-a)^{k}$是$f(x)$的主部。</p>
+<p>46.常见的等价无穷小</p>
+<ul>
+<li>$\sin{x}\sim\tan{x}\sim\ln(1+x)\sim e^x-1\sim\arcsin{x}\sim\arctan{x}\sim x$</li>
+<li>$1-\cos{x}\sim\frac{1}{2}x^2$</li>
+<li>$(1+x)^{\alpha}-1\sim\alpha x$</li>
+<li>$a^x-1\sim x\ln{a}$</li>
+</ul>
+<p>47.等价无穷小替换的前提：<br>极限运算中，当分子分母的函数均有乘积项组成时，可对其中的乘积因子做无穷小替换。</p>
+<p>48.函数间断点的定义<br>设函数$f(x)$在点$x_0$的某邻域内有定义，若</p>
+<script type="math/tex; mode=display">
+\lim_{x\to x_0}f(x)=f(x_0)</script><p>则称函数$f(x)$在$x_0$处连续，称$x_0$是$f(x)$的<strong>连续间断点</strong>；如果$f(x)$在$x_0$处不连续，则称$f(x)$在$x_0$处间断，称$x_0$是$f(x)$的<strong>间断点</strong></p>
+<p>简单来说，函数在某点连续就是在该点极限存在、值存在且两者相等</p>
+<p>49.函数连续的定义：<br>设函数$f(x)$在点$x_0$的某右邻域内有定义，且</p>
+<script type="math/tex; mode=display">
+\lim_{x\to x_0^{+}}f(x)=f(x_0)</script><p>则称函数$f(x)$在$x_0$处右连续；<br>设函数$f(x)$在点$x_0$的某左邻域内有定义，且</p>
+<script type="math/tex; mode=display">
+\lim_{x\to x_0^{-}}f(x)=f(x_0)</script><p>则称函数$f(x)$在$x_0$处左连续。</p>
+<p>或者说，函数 $f(x) $ 在  $x_{0}$  点处连续是 指:  $\forall \epsilon&gt;0, \exists \delta&gt;0, \forall x \in U\left(x_{0}, \delta\right): \mid f(x)-  f\left(x_{0}\right) \mid&lt;\epsilon$ , 即  $\lim_{x \rightarrow x_{0}} f(x)=f\left(x_{0}\right)$  。</p>
+<p>50.定理：在点连续的充分必要条件是在点既左连续又右连续。<br>式子略</p>
+<p>51.定义：若$f(x)$在区间$(a, b)$上的每一点都连续，则称$f(x)$在$(a,b)$上连续，记做$f\in C(a, b)$.</p>
+<p>若$f(x)\in C(a,b)$，且$f(x)$在$x=a$处右连续，在$x=b$处左连续，则称$f(x)$在$[a,b]$上连续，记做$f\in C[a, b]$</p>
+<p>52.复合函数的连续性定理<br>设$f(u)$在$u_0$处连续，$u = g(x)$在$x_0$处连续，$u_0= g(x_0)$。则复合函数$f(g(x))$在$x_0$处连续。</p>
+<p>53.反函数连续性定理<br>设$f(x)$是区间$I$上严格单调的连续函数，则在$f(I)$上存在具有同样严格单调性的连续反函数$f^{-1}$。</p>
+<p>54.初等函数的连续性<br>一切初等函数在其定义域上都是连续的</p>
+<p>55.$f(x)$  在 $ x_{0} $ 处间断是指下列三种情况之一：<br>(1)$f(x)$  在 $ x_{0}$  点处无定义；<br>(2)$\lim_{x \rightarrow x_{0}} f(x)$  不存在；<br>(3)$\lim_{x \rightarrow x_{0}} f(x)$  存在，但是不等于  $f(x_{0})$</p>
+<p>56.间断点</p>
+<ul>
+<li>第一类间断点：$\lim_{x\to x_0^{+}}f(x)$和$\lim_{x\to x_0^{-}}f(x)$均存在</li>
+<li><ul>
+<li>两者相等：<strong>可去间断点</strong></li>
+</ul>
+</li>
+<li><ul>
+<li>两者不相等：<strong>跳跃间断点</strong></li>
+</ul>
+</li>
+<li>第二类间断点：$\lim_{x\to x_0^{+}}f(x)$和$\lim_{x\to x_0^{-}}f(x)$至少有一个不存在</li>
+<li><ul>
+<li><strong>无穷间断点</strong>（不要求掌握）</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>振荡间断点</strong>（不要求掌握）</li>
+</ul>
+</li>
+</ul>
+<h3 id="闭区间上连续函数的性质"><a href="#闭区间上连续函数的性质" class="headerlink" title="闭区间上连续函数的性质"></a>闭区间上连续函数的性质</h3><p>57.有界性定理<br>设$f(x)\in C[a,b]$，则$f(x)$在$[a,b]$上有界。<br>证明：</p>
+<p>58.最值定理<br>设$f(x) \in C[a, b]$ ，则$\exists x_{1}, x_{2} \in [a, b] :$ $f(x_{1})=\max_{x \in[a, b]}{f(x)},$ $f\left(x_{2}\right)=\min_{x \in[a, b]}{f(x)}$</p>
+<p>59.零点存在性定理<br>设  $f(x) \in C[a, b]$  , 若  $f(a) \cdot f(b)&lt;0$ , 则  $\exists \xi \in(a, b): f(\xi)=0$ .</p>
+<p>60.介值性定理<br>设  $f(x) \in C[a, b]$, $M=   \max_{x \in[a, b]}{f(x)}$, $m=\min_{x \in[a, b]}{f(x)}$，则$\forall \lambda \in[m, M]$,$\exists \xi \in[a, b]:$$ f(\xi)=\lambda$</p>
+<h1 id="第三章-导数与微分"><a href="#第三章-导数与微分" class="headerlink" title="第三章 导数与微分"></a>第三章 导数与微分</h1><p>1.导数的定义：<br><img src="https://i.loli.net/2021/10/14/q1eKIgpo6v4fykA.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>2.单侧导数：<br>$f(x)$  在  $x_{0}$处的左(右)导数, 记为  $f_{-}^{\prime}\left(x_{0}\right)\left(f_{+}^{\prime}\left(x_{0}\right)\right)$，函数的左、右导数统称为<strong>单侧导数</strong>。</p>
+<p>3.函数可导的条件<br>设$f(x)$在$x_{0}$点处某邻域有定义，则$f\left(x_{0}\right)$在$x_{0}$点处可导的充要条件是$f_{-}^{\prime}\left(x_{0}\right)=f_{+}^{\prime}\left(x_{0}\right)$</p>
+<p>4.注意<strong>单侧导数</strong>与<strong>导数单侧极限</strong>两个概念的区别</p>
+<ul>
+<li>单侧导数存在，导数单侧极限不一定存在<br>例:f(x)=0 当x＝0<br>f(x)=x²sin(1/x) 当x≠0<br>(以下只讨论导数右极限与右导数，左侧读者自行证明)<br>在点0处 右导数:xsin(1/x) 其中x→0+，数值为0<br>导数右极限:2xsin(1/x)+x²cos(1/x)(-1/x²)=-cos(1/x)其中x→0+ 不存在</li>
+<li>导数单侧极限存在，单侧导数不一定存在<br>例:f(x)=100 当x=0<br>f(x)=x 当x≠0<br>导数右极限为1 (x→0+)<br>右导数:(x-100)/x 其中x→0+ 不存在</li>
+</ul>
+<p>5.可导性和连续性<br><img src="https://i.loli.net/2021/10/14/5WUMpEROPKnlbgA.jpg" srcset="/img/loading.gif" lazyload alt="经典老图了，极其生动形象"></p>
+<p>6.常见函数导数<br>明天再更！</p>
 
             </div>
             <hr>
