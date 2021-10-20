@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      787 字
+      134 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      2
        分钟
     </span>
   
@@ -237,6 +237,19 @@
             
             <div class="markdown-body">
               <ul>
+<li><strong>Laplace定理！</strong><br>设D是n阶行列式，在D中任取k行(列)，再取所有的k列(行)，D=∑（交叉元素方阵的行列式 × 这k行k列的代数余子式）</li>
+<li><strong>Vandermonder行列式</strong><script type="math/tex; mode=display">
+V_{n}=\left|\begin{array}{lllll}
+1 & 1 & \cdots & 1 & 1 \\
+x_{1} & x_{2} & \cdots & x_{n-1} & x_{n} \\
+x_{1}^{2} & x_{2}^{2} & \cdots & x_{n-1}^{2} & x_{n}^{2} \\
+\vdots & \vdots & & \vdots & \vdots \\
+x_{1}^{n-2} & x_{2}^{n-2} & \cdots & x_{n-1}^{n-2} & x_{n}^{n-2} \\
+x_{1}^{n-1} & x_{2}^{n-1} & \cdots & x_{n-1}^{n-1} & x_{n}^{n-1}
+\end{array}\right|</script></li>
+</ul>
+<script type="math/tex; mode=display">
+V_{n}=\prod_{1 \leq i<j \leq n}\left(x_{j}-x_{i}\right)</script><ul>
 <li>上三角矩阵的乘积还是上三角矩阵</li>
 <li>若A、B相乘可换，则A、B必是同阶方阵</li>
 <li>单位矩阵与任何与之同阶的方阵相乘可换</li>
@@ -270,6 +283,9 @@
 <li>如果行列式某一行的各元素都是两个元素之和，则这个行列式等于两个行列式之和</li>
 <li>如果把行列式某一行的各元素都同乘以数k再加到另一行的对应元素上去，则行列式的值不变</li>
 <li>如果$A、B$是同阶方阵，$|AB|=|A||B|$</li>
+<li>|kA|=k^n|A|</li>
+<li>对角矩阵的行列式=对角线元素积</li>
+<li>反对角矩阵的行列式=反对角线元素积再乘$(-1)^{\frac{n(n-1)}{2}}$</li>
 </ul>
 </li>
 <li>余子式和代数余子式的定义：略</li>
@@ -308,6 +324,41 @@
 <li>$(A^{T})^{*}=(A^{*})^{T}$</li>
 <li>$A^{**}=|A|^{(n-1)(n-2)}A$</li>
 <li>$AB=AC$可消去$A$的充要条件是$A$可逆</li>
+<li>定义$A_{m×n}$,$B_{n×m}$，则$A(I_n-BA)=(I_m-AB)A$，$|I_n-BA|=|I_m-AB|$，$$</li>
+<li>一般的，对$m x n$矩阵$A$，若先用若干条横线把它分成$r$个条，再用若干条竖线把它分成若干竖条，然后把每一块上的小矩阵当成一个元素看待，就得到了<strong>分块矩阵</strong></li>
+<li>分块矩阵的运算<ul>
+<li>加法：要求行列数相同，采用相同的分块法（同阶分块矩阵）</li>
+<li>数乘：略</li>
+<li>矩阵乘法：略</li>
+<li>转置：整个转置+子矩阵转置</li>
+<li>共轭：每个元素共轭</li>
+</ul>
+</li>
+<li>标准单位列向量：<script type="math/tex; mode=display">
+\varepsilon_{j}=\left(\begin{array}{c}
+0 \\
+\vdots \\
+0 \\
+1 \\
+0 \\
+\vdots \\
+0
+\end{array}\right)</script></li>
+<li>标准单位行向量：<script type="math/tex; mode=display">
+\mathbf{e}_{i}=(0, \cdots, 0,1,0, \cdots, 0)</script></li>
+<li><strong>分块对角矩阵</strong><script type="math/tex; mode=display">
+\operatorname{diag}\left(A_{1}, A_{2}, \cdots, A_{s}\right)=\left(\begin{array}{cccc}
+A_{1} & & & \\
+& A_{2} & & \\
+& & \ddots & \\
+& & & A_{s}
+\end{array}\right)</script><ul>
+<li>分块对角阵的行列式：对角线每个元素（要是方阵）行列式之积</li>
+<li>分块对角阵的逆矩阵：对角线每个元素取逆矩阵</li>
+<li>分块反对角阵的行列式：对角线每个元素行列式之积 × $(-1)^{\sum_{i&lt;j}a_i×a_j}$（$a_k$表示子矩阵的阶数）</li>
+<li>分块反对角阵的逆矩阵：每个元素取逆矩阵，整个取转置</li>
+</ul>
+</li>
 </ul>
 
             </div>
