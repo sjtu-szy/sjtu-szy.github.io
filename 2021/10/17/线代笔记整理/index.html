@@ -237,7 +237,7 @@
             
             <div class="markdown-body">
               <ul>
-<li><strong>Laplace定理！</strong><br>设D是n阶行列式，在D中任取k行(列)，再取所有的k列(行)，D=∑（交叉元素方阵的行列式 × 这k行k列的代数余子式）</li>
+<li><strong>Laplace定理！</strong><br> 设D是n阶行列式，在D中任取k行(列)，再取所有的k列(行)，D=∑（交叉元素方阵的行列式 × 这k行k列的代数余子式）</li>
 <li><strong>Vandermonder行列式</strong><script type="math/tex; mode=display">
 V_{n}=\left|\begin{array}{lllll}
 1 & 1 & \cdots & 1 & 1 \\
@@ -283,9 +283,29 @@ V_{n}=\prod_{1 \leq i<j \leq n}\left(x_{j}-x_{i}\right)</script><ul>
 <li>如果行列式某一行的各元素都是两个元素之和，则这个行列式等于两个行列式之和</li>
 <li>如果把行列式某一行的各元素都同乘以数k再加到另一行的对应元素上去，则行列式的值不变</li>
 <li>如果$A、B$是同阶方阵，$|AB|=|A||B|$</li>
-<li>|kA|=k^n|A|</li>
+<li>$|kA|=k^n|A|$</li>
 <li>对角矩阵的行列式=对角线元素积</li>
 <li>反对角矩阵的行列式=反对角线元素积再乘$(-1)^{\frac{n(n-1)}{2}}$</li>
+<li>行列式中某行的所有元素都是两个元素的和，则此行列式可分解为两个行列式的和，即<script type="math/tex; mode=display">
+\left|\begin{array}{ccc}
+a_{11} & \cdots & a_{1 n} \\
+\vdots & & \vdots \\
+a_{i 1}+b_{1} & \cdots & a_{i n}+b_{n} \\
+\vdots & & \vdots \\
+a_{n 1} & \cdots & a_{n n}
+\end{array}\right|=\left|\begin{array}{ccc}
+a_{11} & \cdots & a_{1 n} \\
+\vdots & & \vdots \\
+a_{i 1} & \cdots & a_{i n} \\
+\vdots & & \vdots \\
+a_{n 1} & \cdots & a_{n n}
+\end{array}\right|+\left|\begin{array}{ccc}
+a_{11} & \cdots & a_{1 n} \\
+\vdots & & \vdots \\
+b_{1} & \cdots & b_{n} \\
+\vdots & & \vdots \\
+a_{n 1} & \cdots & a_{n n}
+\end{array}\right|</script></li>
 </ul>
 </li>
 <li>余子式和代数余子式的定义：略</li>
@@ -346,7 +366,8 @@ V_{n}=\prod_{1 \leq i<j \leq n}\left(x_{j}-x_{i}\right)</script><ul>
 \end{array}\right)</script></li>
 <li>标准单位行向量：<script type="math/tex; mode=display">
 \mathbf{e}_{i}=(0, \cdots, 0,1,0, \cdots, 0)</script></li>
-<li><strong>分块对角矩阵</strong><script type="math/tex; mode=display">
+<li><p><strong>分块对角矩阵</strong></p>
+<script type="math/tex; mode=display">
 \operatorname{diag}\left(A_{1}, A_{2}, \cdots, A_{s}\right)=\left(\begin{array}{cccc}
 A_{1} & & & \\
 & A_{2} & & \\
@@ -357,6 +378,111 @@ A_{1} & & & \\
 <li>分块对角阵的逆矩阵：对角线每个元素取逆矩阵</li>
 <li>分块反对角阵的行列式：对角线每个元素行列式之积 × $(-1)^{\sum_{i&lt;j}a_i×a_j}$（$a_k$表示子矩阵的阶数）</li>
 <li>分块反对角阵的逆矩阵：每个元素取逆矩阵，整个取转置</li>
+</ul>
+</li>
+<li><p><strong>打洞原理</strong>：任意一个矩阵经过一系列初等行变换总能变成阶梯形矩阵</p>
+<ul>
+<li>左乘——A干掉C(C处为O)<script type="math/tex; mode=display">
+{\left|\begin{array}{ll} A&B\\ 
+C&D 
+\end{array}\right|}=
+\left|\begin{array}{cc} {E}_{m}&{O}\\ 
+{-CA^{-1}}&{E}_{n} 
+\end{array}\right|
+{\left|\begin{array}{ll} A&B\\ 
+C&D 
+\end{array}\right|}=
+\left|\begin{array}{cc} A&B\\ 
+{O}&{D-CA^{-1}B} 
+\end{array}\right|\\</script></li>
+<li>右乘——D干掉B<script type="math/tex; mode=display">
+{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}={\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{O}\\ {-D^{-1}C}&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} {A-BD^{-1}C}&{O}\\ C&D \end{array}\right|\\</script></li>
+<li>右乘——A干掉B(B处为O)<script type="math/tex; mode=display">
+{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}={\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{-A^{-1}B}\\ O&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} A&{O}\\ C&{D-CA^{-1}B} \end{array}\right|\\</script></li>
+<li>左乘——D干掉C<script type="math/tex; mode=display">
+{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}=\left|\begin{array}{cc} {E}_{m}&{-BD^{-1}}\\ O&{E}_{n} \end{array}\right|{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|} =\left|\begin{array}{cc} {A-BD^{-1}C}&B\\ {O}&D \end{array}\right|\\</script></li>
+<li>既左乘又右乘⑴<script type="math/tex; mode=display">
+{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}=\left|\begin{array}{cc} {E}_{m}&{O}\\ {-CA^{-1}}&{E}_{n} \end{array}\right|{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{-A^{-1}B}\\ O&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} A&{O}\\ {O}&{D-CA^{-1}B} \end{array}\right|\\</script></li>
+<li>既左乘又右乘⑵<script type="math/tex; mode=display">
+{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}=\left|\begin{array}{cc} {E}_{m}&{-BD^{-1}}\\ O&{E}_{n} \end{array}\right|{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{O}\\ {-D^{-1}C}&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} {A-BD^{-1}C}&O\\ {O}&D \end{array}\right|\\</script></li>
+</ul>
+</li>
+<li><p>定义：下列三种操作分别称为第一类，第二类和第三类<strong>初等行(列)变换</strong></p>
+<ul>
+<li>交换某两行(列)的位置</li>
+<li>用一非零数乘以某一行(列)</li>
+<li>将某一行(列)的k倍加到另一行(列)上去</li>
+</ul>
+</li>
+<li>定义：如果一个矩阵的左上角为单位矩阵，其它位置的元素都为零，则称其为<br>(相抵)标准形矩阵</li>
+<li>任何矩阵都可以经过单纯的初等行变换化为阶梯形矩阵；</li>
+<li>任何矩阵都可以经过单纯的初等行变换化为Hermite标准型；</li>
+<li><p>任何矩阵都可以经过初等变换化为标准形矩阵</p>
+</li>
+<li><p>定义：在矩阵$A= (a_{ij})_{m×n}$中，任取k行k列$(1\le k \le min\{m,n\})$，<br>位于这些行列交叉点处的$k^2$个元素按它们在矩阵A中的相对位置构成了一个k阶<strong>行列式</strong>，称为A的一个<strong>k阶子式</strong></p>
+</li>
+<li><p>定义：在矩阵$A=(a_{ij})_{m×n}$中，任取k行l列$(1\le k,l \le min\{m,n\})$，<br>位于这些行列交叉点处的元素按它们在矩阵A中的相对位置构成了一个$k×l$ <strong>矩阵</strong>,称为A的一个<strong>子矩阵</strong></p>
+</li>
+<li><p>定义：若在矩阵$A= (a_{ij})_{m×n}$中，存在A的一个r阶子式不为零，但A中任意r＋1阶子式(如果存在的话)都为零，则称r为A的秩，记为r(A)或rank(A)</p>
+<ul>
+<li>即矩阵的秩等于它的非零子式的最高阶数</li>
+<li>规定O矩阵的秩为0</li>
+</ul>
+</li>
+<li>秩的简单性质<ul>
+<li>$\mathrm{r}\left(A_{m \times n}\right) \leq \min \{m, n\}$</li>
+<li>若$r(A)= m(n)$，则分别称A是行(列)满秩矩阵</li>
+<li>若$r(A) = m = n$，则称A是满秩矩阵</li>
+<li>A是满秩矩阵$\Leftrightarrow$A是可逆矩阵</li>
+<li>若矩阵有r阶子式不为零，则$r(A) \ge r$</li>
+<li>若矩阵的所有r阶子式都为零，则$r(A) &lt;r$</li>
+<li>对$A$的任意子矩阵$A_1$，有$r(A_1)\le r(A)$</li>
+<li>$r(A^T)=r(A)$</li>
+<li>阶梯型矩阵的秩等于非零行数，标准形矩阵的秩等于其单位阵的阶数</li>
+<li>初等变换不改变矩阵的秩</li>
+</ul>
+</li>
+<li>初等矩阵<ul>
+<li>定义：单位矩阵经过一次初等变换得到的矩阵称为初等矩阵</li>
+<li>定理：用初等矩阵左(右)乘A的效果等同于对A做初等行(列)变换</li>
+<li>推论：初等矩阵都是可逆矩阵，且其逆为同类型初等矩阵</li>
+<li>定理：对任何$m \times n$矩阵$A$ , 存在$m$阶初等矩阵$R_{1}, R_{2}, \cdots, R_{s}$，使得$R_{1} R_{2} \cdots R_{s} A$为阶梯型矩阵(Hermite标准形矩阵)，存在$n$阶初等矩阵$C_{1}, C_{2}, \cdots, C_{t}$使得<script type="math/tex; mode=display">
+R_{1} R_{2} \cdots R_{s} A C_{1} C_{2} \cdots C_{t}=\left(\begin{array}{cc}
+E_{r} & O \\
+O & O
+\end{array}\right)</script>其中$r=\mathrm{r}(A)$</li>
+</ul>
+</li>
+<li>初等矩阵的逆<ul>
+<li>交换两行后：逆矩阵是本身</li>
+<li>某一元素是k：改成1/k</li>
+<li>某一个非对角线元素是k：改成-k</li>
+</ul>
+</li>
+<li>对任何$m \times n$矩阵$A$，存在$m$阶可逆矩阵$P$及$n$阶可逆矩阵$Q$使得<script type="math/tex; mode=display">
+P A Q=\left(\begin{array}{cc}
+E_{r} & 0 \\
+O & 0
+\end{array}\right)</script>其中$r=r(A)$<br>另外有：$r(PAQ)=r(PA)=r(AQ)= r(A)$</li>
+<li>推论：A可逆$\Leftrightarrow$A的标准形为单位矩阵</li>
+<li>推论：A可逆$\Leftrightarrow$$A=P_{1} P_{2} \cdots P_{k}$，其中$P_i$为初等矩阵</li>
+<li><p>推论：任何一个可逆矩阵可以用初等<strong>行</strong>变换化为单位矩阵</p>
+</li>
+<li><p>满秩分解：<br>对  $m \times n$  阶矩阵$A$,$\mathrm{r}(A)=r$，则存在$m \times r$矩阵$B$与$r \times n$矩阵$C$使得 $A=BC$，且$r(B)=\mathrm{r}(C)=r$（满秩分解不唯一）</p>
+</li>
+<li><p>初等变换法求逆矩阵：略</p>
+</li>
+<li>如果A不可逆，使用这一过程会发生什么情况？无法将左边化成单位矩阵</li>
+<li>定义：如果矩阵A经过有限次初等变换后变为矩阵B，则称二者<strong>等价或相抵</strong>.</li>
+<li>定理矩阵A与B相抵的充要条件是存在可逆矩阵P，Q使得$PAQ=B$</li>
+<li>矩阵的相抵关系满足以下性质：<ul>
+<li>自反性:  $EAE=A$</li>
+<li>对称性:  $PAQ=B \Rightarrow P^{-1} B Q^{-1}=A$</li>
+<li>传递性:<script type="math/tex; mode=display">
+\left.\begin{array}{l}
+P_{1} A Q_{1}=B \\
+P_{2} B Q_{2}=C
+\end{array}\right\} \Rightarrow\left(P_{2} P_{1}\right) A\left(Q_{1} Q_{2}\right)=C</script></li>
 </ul>
 </li>
 </ul>
