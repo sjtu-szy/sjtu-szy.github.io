@@ -250,6 +250,7 @@ x_{1}^{n-1} & x_{2}^{n-1} & \cdots & x_{n-1}^{n-1} & x_{n}^{n-1}
 </ul>
 <script type="math/tex; mode=display">
 V_{n}=\prod_{1 \leq i<j \leq n}\left(x_{j}-x_{i}\right)</script><ul>
+<li>一个技巧：<br><img src="https://iknow-pic.cdn.bcebos.com/8644ebf81a4c510fcac2e1406459252dd42aa561" srcset="/img/loading.gif" lazyload alt=""></li>
 <li>上三角矩阵的乘积还是上三角矩阵</li>
 <li>若A、B相乘可换，则A、B必是同阶方阵</li>
 <li>单位矩阵与任何与之同阶的方阵相乘可换</li>
@@ -461,8 +462,8 @@ O & O
 </li>
 <li>对任何$m \times n$矩阵$A$，存在$m$阶可逆矩阵$P$及$n$阶可逆矩阵$Q$使得<script type="math/tex; mode=display">
 P A Q=\left(\begin{array}{cc}
-E_{r} & 0 \\
-O & 0
+E_{r} & O \\
+O & O
 \end{array}\right)</script>其中$r=r(A)$<br>另外有：$r(PAQ)=r(PA)=r(AQ)= r(A)$</li>
 <li>推论：A可逆$\Leftrightarrow$A的标准形为单位矩阵</li>
 <li>推论：A可逆$\Leftrightarrow$$A=P_{1} P_{2} \cdots P_{k}$，其中$P_i$为初等矩阵</li>
@@ -475,7 +476,8 @@ O & 0
 <li>如果A不可逆，使用这一过程会发生什么情况？无法将左边化成单位矩阵</li>
 <li>定义：如果矩阵A经过有限次初等变换后变为矩阵B，则称二者<strong>等价或相抵</strong>.</li>
 <li>定理矩阵A与B相抵的充要条件是存在可逆矩阵P，Q使得$PAQ=B$</li>
-<li>矩阵的相抵关系满足以下性质：<ul>
+<li><p>矩阵的相抵关系满足以下性质：</p>
+<ul>
 <li>自反性:  $EAE=A$</li>
 <li>对称性:  $PAQ=B \Rightarrow P^{-1} B Q^{-1}=A$</li>
 <li>传递性:<script type="math/tex; mode=display">
@@ -484,6 +486,14 @@ P_{1} A Q_{1}=B \\
 P_{2} B Q_{2}=C
 \end{array}\right\} \Rightarrow\left(P_{2} P_{1}\right) A\left(Q_{1} Q_{2}\right)=C</script></li>
 </ul>
+</li>
+<li><script type="math/tex; mode=display">
+\begin{align}
+|A|\ne 0 \Leftrightarrow & A是非奇异矩阵 \\
+\Leftrightarrow & A是可逆矩阵 \\
+\Leftrightarrow & A是满秩矩阵 \\
+\end{align}</script></li>
+<li><p>非方阵既不是奇异矩阵也不是非奇异矩阵</p>
 </li>
 </ul>
 

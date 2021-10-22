@@ -340,16 +340,19 @@ n=(1+x_n)^n=1+C_n^1x_n+C_n^2x_n^2+\cdots+x_n^n>\frac{n(n-1)}{2}x_n^2</script><p>
 <p>31.函数极限的无穷大、无穷小的定义</p>
 <p>32.函数极限的唯一性：<br>若$\lim_{x \to a}  f(x)=A$，又$\lim_{x \to a}  f(x)=B$，那么$A=B$</p>
 <p>33.函数极限的局部有界性：<br>若$\lim_{x \to a}  f(x)=A$，则$\exists \epsilon&gt;0$，使得函数$f(x)$在$a$的$\epsilon$去心邻域内有界</p>
-<p>34.函数极限的局部保序性<br>设$\lim_{x \to a}  f(x)=A,\lim_{x \to a}  g(x)=B$，且$A&gt;B$，则$\exists \epsilon&gt;0$，当$x$在$a$的$\epsilon$去心邻域内，$f(x)&gt;g(x)$<br><img src="https://i.loli.net/2021/10/10/LYictr1JAEXpH8u.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>35.函数极限的四则运算法则：略<br>$\lim_{x \rightarrow a}(f(x))^{\frac{k}{m}}=A^{\frac{k}{m}}$</p>
-<p>36.复合函数的极限运算定理：<br>若$\lim_{u \to b}  f(u)=A,\lim_{x \to a}  \varphi(x)=b$，且当$x$在$a$的邻域内时，$\varphi(x)\ne b$，则</p>
+<p>34.函数极限的局部保序性：<br>设$\lim_{x \to a}  f(x)=A,\lim_{x \to a}  g(x)=B$，且$A&gt;B$，则$\exists \epsilon&gt;0$，当$x$在$a$的$\epsilon$去心邻域内，$f(x)&gt;g(x)$</p>
+<p>35.函数极限的局部保号性：<br>若$\lim_{x\to a} f(x)=A,A&gt;0(A<0)$，则$\exists \delta>0$，当$x\in \mathring{U}(a,\delta)$时，</p>
 <script type="math/tex; mode=display">
-\lim_{x\to a} f[\varphi(x)]=A</script><p>37.夹逼定理<br>(1)$\exists \delta_{0}&gt;0, \forall x \in \mathring{U}\left(x_{0}, \delta_{0}\right): g(x) \leqslant f(x) \leqslant h(x)$<br>(2)$\lim_{x \rightarrow x_{0}} g(x)=\lim_{x \rightarrow x_{0}} h(x)=A$<br>则必有$\lim_{x\to x_0} f(x)=A$</p>
-<p>38.单调有界函数单侧极限的存在性<br><img src="https://i.loli.net/2021/10/10/S5twPWeVuD8Qklc.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>39.Heine归并定理<br>$\lim_{x\to a} f(x)=A$的充要条件为：对任一满足$\lim_{n \to \infty}  x_n=a$且$x_n\ne a$的数列${x_n}$均有</p>
+f(x)>\frac{A}{2}>0\quad \left(f(x)<\frac{A}{2}<0\right)</script><p><strong>推论：</strong>若$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta)$时，有$f(x)\ge 0  (f(x)\le 0)$，且$\lim_{x\to a} f(x)=A$，则</p>
 <script type="math/tex; mode=display">
-\lim_{n \to \infty} f(x_n)=A</script><p>40.</p>
-<p>41.常用极限</p>
+A\ge 0 \left(A\le 0\right)</script><p>36.函数极限的四则运算法则：略<br>$\lim_{x \rightarrow a}(f(x))^{\frac{k}{m}}=A^{\frac{k}{m}}$</p>
+<p>37.复合函数的极限运算定理：<br>若$\lim_{u \to b}  f(u)=A,\lim_{x \to a}  \varphi(x)=b$，且当$x$在$a$的邻域内时，$\varphi(x)\ne b$，则</p>
+<script type="math/tex; mode=display">
+\lim_{x\to a} f[\varphi(x)]=A</script><p>38.夹逼定理<br>(1)$\exists \delta_{0}&gt;0, \forall x \in \mathring{U}\left(x_{0}, \delta_{0}\right): g(x) \leqslant f(x) \leqslant h(x)$<br>(2)$\lim_{x \rightarrow x_{0}} g(x)=\lim_{x \rightarrow x_{0}} h(x)=A$<br>则必有$\lim_{x\to x_0} f(x)=A$</p>
+<p>39.单调有界函数单侧极限的存在性<br><img src="https://i.loli.net/2021/10/10/S5twPWeVuD8Qklc.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>40.Heine归并定理<br>$\lim_{x\to a} f(x)=A$的充要条件为：对任一满足$\lim_{n \to \infty}  x_n=a$且$x_n\ne a$的数列${x_n}$均有</p>
+<script type="math/tex; mode=display">
+\lim_{n \to \infty} f(x_n)=A</script><p>41.常用极限</p>
 <ul>
 <li>$\lim_{x\to 0}\frac{\sin{x}}{x}=\lim_{x\to 0}\frac{\tan{x}}{x}=1$</li>
 <li>$\lim_{x\to 0}\frac{1-\cos{x}}{x^2}=\frac{1}{2}$</li>
@@ -447,7 +450,8 @@ n=(1+x_n)^n=1+C_n^1x_n+C_n^2x_n^2+\cdots+x_n^n>\frac{n(n-1)}{2}x_n^2</script><p>
 <li>导数单侧极限存在，单侧导数不一定存在<br>例:f(x)=100 当x=0<br>f(x)=x 当x≠0<br>导数右极限为1 (x→0+)<br>右导数:(x-100)/x 其中x→0+ 不存在</li>
 </ul>
 <p>5.可导性和连续性<br><img src="https://i.loli.net/2021/10/14/5WUMpEROPKnlbgA.jpg" srcset="/img/loading.gif" lazyload alt="经典老图了，极其生动形象"></p>
-<p>6.常见函数导数<br>明天再更！</p>
+<p>6.常见函数导数<br><img src="https://i.loli.net/2021/10/22/EKaWURV6j9G3bNe.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://i.loli.net/2021/10/22/HymVdPKIg3FWvpU.png" srcset="/img/loading.gif" lazyload alt=""></p>
 
             </div>
             <hr>
