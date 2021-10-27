@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.3k 字
+      3.4k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      45
+      47
        分钟
     </span>
   
@@ -305,7 +305,7 @@ D_{n}=\left|\begin{array}{cccccc}
 </li>
 <li>除对角线外元素全相等的行列式：<br><img src="https://iknow-pic.cdn.bcebos.com/8644ebf81a4c510fcac2e1406459252dd42aa561" srcset="/img/loading.gif" lazyload alt=""></li>
 </ul>
-<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><h3 id="零矩阵"><a href="#零矩阵" class="headerlink" title="零矩阵"></a>零矩阵</h3><h3 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h3><h3 id="行矩阵和列矩阵"><a href="#行矩阵和列矩阵" class="headerlink" title="行矩阵和列矩阵"></a>行矩阵和列矩阵</h3><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><ul>
+<h3 id="零矩阵"><a href="#零矩阵" class="headerlink" title="零矩阵"></a>零矩阵</h3><h3 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h3><h3 id="行矩阵和列矩阵"><a href="#行矩阵和列矩阵" class="headerlink" title="行矩阵和列矩阵"></a>行矩阵和列矩阵</h3><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><ul>
 <li>对角矩阵的性质<ul>
 <li>同阶对角矩阵的乘积仍为对角阵，且它们的乘积是可交换的<br><img src="https://i.loli.net/2021/10/17/cWfL3eVgKvJR5zd.png" srcset="/img/loading.gif" lazyload alt=""></li>
 <li>对角矩阵的n次方即计算每个元素的n次方</li>
@@ -394,7 +394,7 @@ a_{n 1} & \cdots & a_{n n}
 </li>
 </ul>
 <h3 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h3><ul>
-<li>定义：略</li>
+<li>定义：略（<strong>注意：只有方阵才有逆矩阵</strong>）</li>
 <li>性质<ul>
 <li>逆矩阵通常被称为互逆矩阵</li>
 <li>若$A$有左逆$B$或有右逆$C$，则$A$可逆且$A^{-1} =B = C$</li>
@@ -588,6 +588,22 @@ P_{2} B Q_{2}=C
 <li><p>非方阵既不是奇异矩阵也不是非奇异矩阵</p>
 </li>
 </ul>
+<h3 id="AB与BA的爱恨情仇"><a href="#AB与BA的爱恨情仇" class="headerlink" title="AB与BA的爱恨情仇"></a>AB与BA的爱恨情仇</h3><ul>
+<li>若$A$为$m×n$矩阵，$B$为$n×m$矩阵，则：<ul>
+<li>$A(I_n-BA)=(I_m-AB)A$</li>
+<li>若$I_m-AB$可逆，则$(I_n-BA)^{-1}=I_n+B(I_m-AB)^{-1}A$</li>
+<li>$|I_m-AB|=|I_n-BA|$</li>
+<li>若$m=n$，$AB=I$，则$BA=I$</li>
+<li>若$m&gt;n$，$AB=I_m$，则$BA=I_n$</li>
+<li>若$m&lt;n$，$AB=I_m$，则不一定有$BA=I_n$</li>
+<li>$tr(AB)=tr(BA)$</li>
+<li>$|\lamda I_m-AB|=\lamda^{m-n}|\lamda I_n-BA|$</li>
+<li>若$|BA|\ne 0$，则$AB$可对角化的充要条件是$BA$可对角化</li>
+<li>$r(I_m-AB)+n=r(I_n-BA)+m$</li>
+</ul>
+</li>
+</ul>
+<h3 id="用函数解线代题"><a href="#用函数解线代题" class="headerlink" title="用函数解线代题"></a>用函数解线代题</h3><p><img src="https://i.loli.net/2021/10/27/GYrCh98bqM7jtHS.png" srcset="/img/loading.gif" lazyload alt=""></p>
 
             </div>
             <hr>
