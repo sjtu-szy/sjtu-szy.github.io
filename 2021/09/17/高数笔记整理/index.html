@@ -439,9 +439,9 @@ A\ge 0 \left(A\le 0\right)</script><p>36.函数极限的四则运算法则：略
 <script type="math/tex; mode=display">
 \forall G>0,\exists N\in \mathbb{N}^{*},\forall n>N:|x_n|>G</script></li>
 <li><p>相互关系：<br><img src="https://i.loli.net/2021/10/19/GBWMcEPTpHX57Ad.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h1 id="第三章-导数与微分"><a href="#第三章-导数与微分" class="headerlink" title="第三章 导数与微分"></a>第三章 导数与微分</h1><p>1.导数的定义：<br><img src="https://i.loli.net/2021/10/14/q1eKIgpo6v4fykA.png" srcset="/img/loading.gif" lazyload alt=""></p>
 </li>
 </ul>
+<h1 id="第三章-导数与微分"><a href="#第三章-导数与微分" class="headerlink" title="第三章 导数与微分"></a>第三章 导数与微分</h1><p>1.导数的定义：<br><img src="https://i.loli.net/2021/10/14/q1eKIgpo6v4fykA.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>2.单侧导数：<br>$f(x)$  在  $x_{0}$处的左(右)导数, 记为  $f_{-}^{\prime}\left(x_{0}\right)\left(f_{+}^{\prime}\left(x_{0}\right)\right)$，函数的左、右导数统称为<strong>单侧导数</strong>。</p>
 <p>3.函数可导的条件<br>设$f(x)$在$x_{0}$点处某邻域有定义，则$f\left(x_{0}\right)$在$x_{0}$点处可导的充要条件是$f_{-}^{\prime}\left(x_{0}\right)=f_{+}^{\prime}\left(x_{0}\right)$</p>
 <p>4.注意<strong>单侧导数</strong>与<strong>导数单侧极限</strong>两个概念的区别</p>
@@ -452,6 +452,101 @@ A\ge 0 \left(A\le 0\right)</script><p>36.函数极限的四则运算法则：略
 <p>5.可导性和连续性<br><img src="https://i.loli.net/2021/10/14/5WUMpEROPKnlbgA.jpg" srcset="/img/loading.gif" lazyload alt="经典老图了，极其生动形象"></p>
 <p>6.常见函数导数<br><img src="https://i.loli.net/2021/10/22/EKaWURV6j9G3bNe.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p><img src="https://i.loli.net/2021/10/22/HymVdPKIg3FWvpU.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>7.单侧导数的定义：$f(x)$在$x_0$处的左(右)导数，记为$f_{-}^{\prime}\left(x_{0}\right)\left(f_{+}^{\prime}\left(x_{0}\right)\right)$.函数的左、右导数统称为单侧导数。</p>
+<ul>
+<li>设$f(x)$在$x_0$点处某邻域有定义，则$f(x)$在$x_0$点处可导的充要条件是$f_{-}^{\prime}\left(x_{0}\right)=f_{+}^{\prime}\left(x_{0}\right)$</li>
+</ul>
+<p>8.函数在点$x_0$的单侧导数和导函数在该点的单侧极限是两个不同的概念</p>
+<p>9.微分：$d y=f^{\prime}(x) d x$</p>
+<p>10.导数的四则运算：略</p>
+<p>11.复合函数求导：略</p>
+<p>12.反函数求导：设函数$y= f(x)$在$x_0$的某邻域内严格单调，连续，在$x_0$点处可导且$f^{\prime}\left(x_{0}\right) \neq 0$，则$f(x)$的反函数$x=\phi(y)$在点$y_0(y_0=f(x_0))$处可导，且有</p>
+<script type="math/tex; mode=display">
+\phi^{\prime}\left(y_{0}\right)=\frac{1}{f^{\prime}\left(x_{0}\right)}</script><p>13.高阶导数的概念：略</p>
+<p>14.$n$阶连续可导：若$f^{(n)}$在$I$上连续，则称$f(x)$在$I$上$n$阶连续可导，记为$f(x) \in C^{(n)}(I)$</p>
+<p>15.几个常用的基本初等函数的n次导数公式</p>
+<ul>
+<li>$\left[(a x+b)^{\alpha}\right]^{(n)}=\frac{\alpha!}{(\alpha-n)!} a^{n}(a x+b)^{\alpha-n}(n \in \mathbb{N}, a \neq 0)$</li>
+<li>$(\sin a x)^{(n)}=a^{n} \sin \left(a x+\frac{n \pi}{2}\right), n \in \mathbb{N}$</li>
+<li>$(\cos a x)^{(n)}=a^{n} \cos \left(a x+\frac{n \pi}{2}\right), n \in \mathbb{N}$</li>
+<li>$\left(a^{x}\right)^{(n)}=a^{x}(\ln a)^{n},(a&gt;0)$</li>
+<li>$(\ln x)^{(n)}=(-1)^{n-1} \frac{(n-1) !}{x^{n}}$</li>
+</ul>
+<p>16.设函数</p>
+<script type="math/tex; mode=display">
+f(x)=\left\{\begin{array}{lc}
+|x|^{\alpha} \sin \frac{1}{x}, \quad x \neq 0 \\
+0, \quad x=0
+\end{array}\right.</script><script type="math/tex; mode=display">
+\begin{matrix}
+ & x=0处连续 & x=0处可导 & x=0处导数连续 & x=0处导数可导\\
+ \alpha\le 0 & × & × & N/A & N/A\\
+ 0<\alpha\le 1 & √ & × & N/A & N/A\\
+ 1<\alpha\le 2 & √ & √ & × & ×\\
+ 2<\alpha\le 3 & √ & √ & √ & ×\\
+ \alpha>3 & √ & √ & √ & √\\
+\end{matrix}</script><p>17.莱布尼茨公式：</p>
+<script type="math/tex; mode=display">
+[u(x) v(x)]^{(n)}=\sum_{k=0}^{n} C_{n}^{k} u^{(k)}(x) v^{(n-k)}(x)</script><p>18.费马（Fermat）引理：<br>若函数$f(x)$在$x_0$点处可导，且$x_0$为$f(x)$的极值点，则$f’(x_0)=0$</p>
+<ul>
+<li>$f’(x)$的零点称为$f(x)$的驻点或稳定点</li>
+<li>可导的极值点必为驻点，驻点未必是极值点</li>
+<li>几何意义：可导的极值点处的切线平行于$x$轴</li>
+<li>推论：若$f(x)$在$x_0$处可导，为$f(x)$在区间$I$上的最值点，且为$I$的内点，则$f’(x_0)=0$</li>
+</ul>
+<div class="note note-warning">
+            <p>用于证明 $\exists \xi : f’(\xi)=0$类的题</p>
+          </div>
+<p>19.罗尔（Rolle）中值定理<br>设 $f(x) \in C[a, b] \cap D(a, b)$  且 $ f(a)=f(b)$，则  $\exists \xi \in(a, b): f^{\prime}(\xi)=0$</p>
+<ul>
+<li>推论：若  $f(x) \in C[a, b] \cap D(a, b)$，且在 $ (a, b)$内 $ f^{\prime}(x) \neq 0 $， 则 $ y=f(x)$  在 $ [a, b]$  上为单射，从而必存在反函数</li>
+<li>推广1：设函数 $ f(x) \in C[a,+\infty) \cap D(a,+\infty)$, $a$  为常数。又 $ \lim_{x \rightarrow+\infty} f(x)=f(a)$，则  $\exists \xi \in(a ,+\infty): f^{\prime}(\xi)=0$.</li>
+<li>用于计算函数零点个数或证明$f^{\prime}(\xi)+g(\xi) f(\xi)=0$类的题<br>1.化为$f^{\prime}(\xi)+g(\xi) f(\xi)=0$的形式<br>2.构造$F(x)=f(x)e^{u(x)}$，则$F^{\prime}(x)=f^{\prime}(x)+u^{\prime}(x) f(x)$<br>3.利用 $u^{\prime}(x)=g(x)$求 $u(x)$，然后代入<br>4.找到$x_1,x_2$，使得$F(x_1)=F(x_2)=0$<br>5.利用罗尔定理，得出结论</li>
+</ul>
+<div class="note note-info">
+            <p>若出现了二阶导数，往往需要找$F(x)$的三个零点</p>
+          </div>
+<p>20.拉格朗日（Lagrange）中值定理<br>设 $ f(x) \in C[a, b] \cap D(a, b)$，则  $\exists \xi \in(a, b): f^{\prime}(\xi)=\frac{f(b)-f(a)}{b-a}$</p>
+<ul>
+<li>常见变形<ul>
+<li>$\exists \xi \in(a, b): f(b)-f(a)=f^{\prime}(\xi)(b-a)$</li>
+<li>$\exists \theta \in(0,1):f(b)-f(a)=f^{\prime}(a+\theta(b-a)) \cdot(b-a)$</li>
+<li>$\exists \theta \in(0,1):f\left(x_{0}+h\right)-f\left(x_{0}\right)=f^{\prime}\left(x_{0}+\theta h\right) \cdot h$</li>
+<li>$\exists \xi \in(a, x): f(x)-f(a)=f^{\prime}\left(\xi_{x}\right)(x-a)$</li>
+</ul>
+</li>
+<li>推论1：区间$I$上函数$f(x)=C$(常数) $\Leftrightarrow  f^{\prime}(x)=0, \forall x \in I$</li>
+<li>推论2：$f(x), g(x) \in C(I)$, $f^{\prime}(x)=g^{\prime}(x), x \in I$ $\Leftrightarrow \exists C: f(x)=g(x)+C$, $\forall x \in I$ </li>
+</ul>
+<div class="note note-danger">
+            <p>用于证明与$f’(x)$相关的等式、不等式（尤其是出现了很多相似式子相减）</p>
+          </div>
+<p>21.柯西（Cauchy）中值定理<br>设  $f(x), g(x) \in C[a, b]  \cap D(a, b)$, $g^{\prime}(x) \neq 0, x \in(a, b)$ ，则$ \exists \xi \in(a, b):$ $\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f^{\prime}(\xi)}{g^{\prime}(\xi)}$</p>
+<div class="note note-success">
+            <p>用于证明看起来上下都求了导的式子</p>
+          </div>
+<p>22.达布（Darboux）定理<br>设  $f(x) \in D[a, b]$ , 且  $f^{\prime}(a)&lt;f^{\prime}(b)$ , 则 $\forall \lambda \in\left(f^{\prime}(a), f^{\prime}(b)\right)$, $\exists \xi \in   (a, b): f^{\prime}(\xi)=\lambda$</p>
+<p>23.导数极限定理：<br>设函数$f(x)$在$x_0$处连续，在$x_0$的某去心邻域可导，且$\lim_{x \rightarrow x_{0}} f^{\prime}(x)$存在，则$f(x)$在$x_0$处可导，且$f’(x_0)=\lim_{x \rightarrow x_{0}} f^{\prime}(x)$ （即导函数在$x_0$处连续)</p>
+<p>24.导函数的连续性定理<br>设 $f(x) \in D(a, b)$，则 $ (a, b)$  内的点要么是  $f^{\prime}(x)$  的连续点，要么是  $f^{\prime}(x)$  的第二类间断点</p>
+<ul>
+<li>推论：存在第一类间断点的函数必然不是某个函数的导函数</li>
+</ul>
+<p>25.洛必达（L’Hôpital，或者L’Hospital）法则<br>若  $\exists \delta&gt;0:$ $f(x), g(x) \in D\left(x_{0}, x_{0}+\delta\right)$, $ g^{\prime}(x) \neq 0$, $\forall x \in\left(x_{0}, x_{0}+\delta\right)$，又$\lim_{x \rightarrow x_{0}^{+}} \frac{f^{\prime}(x)}{g^{\prime}(x)}=A$（$A$为有限数或$\infty$）<br>1.$\lim_{x \rightarrow x_{0}^{+}} f(x)=\lim_{x \rightarrow x_{0}^{+}} g(x)=0$,则$\lim_{x \rightarrow x_{0}^{+}} \frac{f(x)}{g(x)}=A$<br>2.$\lim_{x \rightarrow x_{0}^{+}} g(x)=\infty$,则$\lim_{x \rightarrow x_{0}^{+}} \frac{f(x)}{g(x)}=A$</p>
+<div class="note note-primary">
+            <p>实际运用中结合等价无穷小替换和换元</p>
+          </div>
+<h2 id="week7感想"><a href="#week7感想" class="headerlink" title="week7感想"></a>week7感想</h2><blockquote>
+<p>中值定理是反映函数与导数之间联系的重要定理，也是微积分学的理论基础，在许多方面它都有重要的作用，在进行一些公式推导与定理证明中都有很多应用。</p>
+</blockquote>
+<p>　　本周我们主要学习了三大微分中值定理，并通过具体例题初步了解了如何构造函数来运用中值定理，从而得出要证的式子。构造一直被认为是反直觉的方法。波利亚·哲尔吉在《怎样解题》中提到：</p>
+<blockquote>
+<p>这个方法虽然看上去很完美，没有任何瑕疵，<br>但究竟是怎么想出这个方法的呢？<br>我究竟该怎么做才能想出或发现方法呢？</p>
+</blockquote>
+<p>　　比如，你有一道中值定理的题不会做，看到答案，上来就是构造函数，你也不禁要问：为什么是这样构造的？答案是怎么想到这样构造的？回答这两个问题，我们就需要对常用函数有深刻的了解，比如你看到$f(x)+f’(x)$，你脑子里立刻应该跳出$e^x$，因为$(f(x)e^x)’=(f(x)+f’(x))e^x$。然后，通过不断重复记忆，增强前后关联程度，你才能在结论和原函数可能的形式之间来去自如。</p>
+<p>　　我们还学了心心念念的洛必达法则。明白了洛必达法则的适用前提和内在原理。之前很多极限的计算到此方便了很多。同时也留下一个悬念：洛必达和泰勒到底谁更厉害呢？还要等下周再揭晓了</p>
+<blockquote>
+<p>我一边想着那些计算公式，一边体会着古时候数学家们体验到的那份感动。即便是几百年前就已经被证明的也没关系，现在我一边追溯理论一边埋头苦思的东西一定是自己的东西。<br>——结城浩《数学女孩》</p>
+</blockquote>
 
             </div>
             <hr>

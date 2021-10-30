@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.4k 字
+      3.2k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      47
+      44
        分钟
     </span>
   
@@ -236,7 +236,7 @@
             <h1 style="display: none">线代笔记整理（部分）</h1>
             
             <div class="markdown-body">
-              <h2 id="手动置顶：特殊的行列式计算"><a href="#手动置顶：特殊的行列式计算" class="headerlink" title="手动置顶：特殊的行列式计算"></a>手动置顶：特殊的行列式计算</h2><ul>
+              <h3 id="手动置顶：特殊的行列式计算"><a href="#手动置顶：特殊的行列式计算" class="headerlink" title="手动置顶：特殊的行列式计算"></a>手动置顶：特殊的行列式计算</h3><ul>
 <li><strong>Laplace定理！</strong><br> 设D是n阶行列式，在D中任取k行(列)，再取所有的k列(行)，D=∑（交叉元素方阵的行列式 × 这k行k列的代数余子式）</li>
 <li><strong>Vandermonder行列式</strong><script type="math/tex; mode=display">
 V_{n}=\left|\begin{array}{lllll}
@@ -314,6 +314,18 @@ D_{n}=\left|\begin{array}{cccccc}
 </ul>
 <h3 id="上三角矩阵"><a href="#上三角矩阵" class="headerlink" title="上三角矩阵"></a>上三角矩阵</h3><ul>
 <li>上三角矩阵的乘积还是上三角矩阵</li>
+<li>可逆的上三角矩阵A之逆仍为上三角矩阵<ul>
+<li>证明：对矩阵A的阶数用数学归纳法。当n=1时，结论显然<br>假设结论对n-1阶矩阵成立，记<script type="math/tex; mode=display">
+A=\left(\begin{array}{cc}
+a_{11} & \alpha^{T} \\
+\mathbf{0} & A_{n-1}
+\end{array}\right)</script>由A可逆知$a<em>{11} \neq 0$及$A</em>{n-1}$可逆, 于是<script type="math/tex; mode=display">
+A^{-1}=\left(\begin{array}{cc}
+a_{11}^{-1} & -a_{11}^{-1} \alpha^{T} A_{n-1}^{-1} \\
+0 & A_{n-1}^{-1}
+\end{array}\right)</script>由归纳假设知$A_{n-1}^{-1}$是上三角矩阵, 所以$A^{-1}$也是上三角矩阵</li>
+</ul>
+</li>
 </ul>
 <h3 id="矩阵的初等行变换"><a href="#矩阵的初等行变换" class="headerlink" title="矩阵的初等行变换"></a>矩阵的初等行变换</h3><h3 id="阶梯形矩阵"><a href="#阶梯形矩阵" class="headerlink" title="阶梯形矩阵"></a>阶梯形矩阵</h3><h3 id="简化阶梯形（Hermite）"><a href="#简化阶梯形（Hermite）" class="headerlink" title="简化阶梯形（Hermite）"></a>简化阶梯形（Hermite）</h3><h3 id="矩阵加减、数乘"><a href="#矩阵加减、数乘" class="headerlink" title="矩阵加减、数乘"></a>矩阵加减、数乘</h3><h4 id="加法交换律"><a href="#加法交换律" class="headerlink" title="加法交换律"></a>加法交换律</h4><h4 id="加法结合律"><a href="#加法结合律" class="headerlink" title="加法结合律"></a>加法结合律</h4><h3 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h3><h4 id="乘法结合律"><a href="#乘法结合律" class="headerlink" title="乘法结合律"></a>乘法结合律</h4><h4 id="乘法分配律"><a href="#乘法分配律" class="headerlink" title="乘法分配律"></a>乘法分配律</h4><h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><ul>
 <li>两个同阶上三角矩阵的乘积还是上三角矩阵</li>
@@ -420,7 +432,7 @@ a_{n 1} & \cdots & a_{n n}
 <li>$A^{-1}=|A|^{-1}A^{*}$</li>
 <li>$(A^{-1})^{*}=(A^{*})^{-1}$</li>
 <li>$(A^{T})^{*}=(A^{*})^{T}$</li>
-<li>$A^{**}=|A|^{(n-1)(n-2)}A$</li>
+<li>$A^{**}=|A|^{(n-2)}A$</li>
 </ul>
 </li>
 </ul>
@@ -434,6 +446,37 @@ a_{n 1} & \cdots & a_{n n}
 <li>共轭：每个元素共轭</li>
 </ul>
 </li>
+<li>分块矩阵的初等变换<ul>
+<li>第一类：对调分块矩阵中某两块行(列)的位置；</li>
+<li>第二类：用可逆矩阵<strong>左乘</strong>分块矩阵的某一块<strong>行</strong>，或<strong>右乘</strong>某一块<strong>列</strong>；</li>
+<li>第三类：用某一矩阵<strong>左乘</strong>分块矩阵的某一块<strong>行</strong>后加到另一行块上去，或<strong>右乘</strong>某一块<strong>列</strong>后加到另一块列上去</li>
+<li>第三类块初等变换不改变矩阵的行列式</li>
+</ul>
+</li>
+<li>分块初等矩阵：设$E=diag{E_1,\cdots,E_k}$（单位矩阵的分块对角矩阵），则用三类块的初等变换作用于E得到三类分块初等矩阵<ul>
+<li>对分块矩阵作初等行(列)变换，等于在其左(右)边乘以相应的分块初等矩阵</li>
+</ul>
+</li>
+</ul>
+<h3 id="第一降阶公式"><a href="#第一降阶公式" class="headerlink" title="第一降阶公式"></a>第一降阶公式</h3><ul>
+<li>当A可逆时<script type="math/tex; mode=display">
+\left|\begin{array}{cc}
+A & B \\
+C & D
+\end{array}\right|=\left|\begin{array}{cc}
+A & B \\
+O & D-C A^{-1} B
+\end{array}\right|=|A|\left|D-C A^{-1} B\right|</script></li>
+<li>当D可逆时<script type="math/tex; mode=display">
+\left|\begin{array}{cc}
+A & B \\
+C & D
+\end{array}\right|=\left|\begin{array}{cc}
+A-B D^{-1} C & B \\
+O & D
+\end{array}\right|=\left|D \| A-B D^{-1} C\right|</script></li>
+<li>当A和D都可逆时<script type="math/tex; mode=display">
+|A|\left|D-C A^{-1} B\right|=|D||A-B D^{-1} C|</script></li>
 </ul>
 <h3 id="标准单位列向量："><a href="#标准单位列向量：" class="headerlink" title="标准单位列向量："></a>标准单位列向量：</h3><script type="math/tex; mode=display">
 \varepsilon_{j}=\left(\begin{array}{c}
@@ -463,28 +506,28 @@ A_{1} & & & \\
 </ul>
 <h3 id="打洞原理：任意一个矩阵经过一系列初等行变换总能变成阶梯形矩阵"><a href="#打洞原理：任意一个矩阵经过一系列初等行变换总能变成阶梯形矩阵" class="headerlink" title="打洞原理：任意一个矩阵经过一系列初等行变换总能变成阶梯形矩阵"></a><strong>打洞原理</strong>：任意一个矩阵经过一系列初等行变换总能变成阶梯形矩阵</h3><ul>
 <li>左乘——A干掉C(C处为O)<script type="math/tex; mode=display">
-{\left|\begin{array}{ll} A&B\\ 
+{\left[\begin{array}{ll} A&B\\ 
 C&D 
-\end{array}\right|}=
-\left|\begin{array}{cc} {E}_{m}&{O}\\ 
+\end{array}\right]}=
+\left[\begin{array}{cc} {E}_{m}&{O}\\ 
 {-CA^{-1}}&{E}_{n} 
-\end{array}\right|
-{\left|\begin{array}{ll} A&B\\ 
+\end{array}\right]
+{\left[\begin{array}{ll} A&B\\ 
 C&D 
-\end{array}\right|}=
-\left|\begin{array}{cc} A&B\\ 
+\end{array}\right]}=
+\left[\begin{array}{cc} A&B\\ 
 {O}&{D-CA^{-1}B} 
-\end{array}\right|\\</script></li>
+\end{array}\right]\\</script></li>
 <li>右乘——D干掉B<script type="math/tex; mode=display">
-{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}={\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{O}\\ {-D^{-1}C}&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} {A-BD^{-1}C}&{O}\\ C&D \end{array}\right|\\</script></li>
+{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}={\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}\left[\begin{array}{cc} {E}_{m}&{O}\\ {-D^{-1}C}&{E}_{n} \end{array}\right]=\left[\begin{array}{cc} {A-BD^{-1}C}&{O}\\ C&D \end{array}\right]\\</script></li>
 <li>右乘——A干掉B(B处为O)<script type="math/tex; mode=display">
-{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}={\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{-A^{-1}B}\\ O&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} A&{O}\\ C&{D-CA^{-1}B} \end{array}\right|\\</script></li>
+{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}={\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}\left[\begin{array}{cc} {E}_{m}&{-A^{-1}B}\\ O&{E}_{n} \end{array}\right]=\left[\begin{array}{cc} A&{O}\\ C&{D-CA^{-1}B} \end{array}\right]\\</script></li>
 <li>左乘——D干掉C<script type="math/tex; mode=display">
-{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}=\left|\begin{array}{cc} {E}_{m}&{-BD^{-1}}\\ O&{E}_{n} \end{array}\right|{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|} =\left|\begin{array}{cc} {A-BD^{-1}C}&B\\ {O}&D \end{array}\right|\\</script></li>
+{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}=\left[\begin{array}{cc} {E}_{m}&{-BD^{-1}}\\ O&{E}_{n} \end{array}\right]{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]} =\left[\begin{array}{cc} {A-BD^{-1}C}&B\\ {O}&D \end{array}\right]\\</script></li>
 <li>既左乘又右乘⑴<script type="math/tex; mode=display">
-{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}=\left|\begin{array}{cc} {E}_{m}&{O}\\ {-CA^{-1}}&{E}_{n} \end{array}\right|{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{-A^{-1}B}\\ O&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} A&{O}\\ {O}&{D-CA^{-1}B} \end{array}\right|\\</script></li>
+{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}=\left[\begin{array}{cc} {E}_{m}&{O}\\ {-CA^{-1}}&{E}_{n} \end{array}\right]{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}\left[\begin{array}{cc} {E}_{m}&{-A^{-1}B}\\ O&{E}_{n} \end{array}\right]=\left[\begin{array}{cc} A&{O}\\ {O}&{D-CA^{-1}B} \end{array}\right]\\</script></li>
 <li>既左乘又右乘⑵<script type="math/tex; mode=display">
-{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}=\left|\begin{array}{cc} {E}_{m}&{-BD^{-1}}\\ O&{E}_{n} \end{array}\right|{\left|\begin{array}{ll} A&B\\ C&D \end{array}\right|}\left|\begin{array}{cc} {E}_{m}&{O}\\ {-D^{-1}C}&{E}_{n} \end{array}\right|=\left|\begin{array}{cc} {A-BD^{-1}C}&O\\ {O}&D \end{array}\right|\\</script></li>
+{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}=\left[\begin{array}{cc} {E}_{m}&{-BD^{-1}}\\ O&{E}_{n} \end{array}\right]{\left[\begin{array}{ll} A&B\\ C&D \end{array}\right]}\left[\begin{array}{cc} {E}_{m}&{O}\\ {-D^{-1}C}&{E}_{n} \end{array}\right]=\left[\begin{array}{cc} {A-BD^{-1}C}&O\\ {O}&D \end{array}\right]\\</script></li>
 </ul>
 <h3 id="初等行-列-变换"><a href="#初等行-列-变换" class="headerlink" title="初等行(列)变换"></a>初等行(列)变换</h3><ul>
 <li>定义：下列三种操作分别称为第一类，第二类和第三类<strong>初等行(列)变换</strong><ul>
@@ -511,7 +554,6 @@ C&D
 </ul>
 </li>
 <li>秩的简单性质<ul>
-<li>$\mathrm{r}\left(A_{m \times n}\right) \leq \min \{m, n\}$</li>
 <li>若$r(A)= m(n)$，则分别称A是行(列)满秩矩阵</li>
 <li>若$r(A) = m = n$，则称A是满秩矩阵</li>
 <li>A是满秩矩阵$\Leftrightarrow$A是可逆矩阵</li>
@@ -521,6 +563,16 @@ C&D
 <li>$r(A^T)=r(A)$</li>
 <li>阶梯型矩阵的秩等于非零行数，标准形矩阵的秩等于其单位阵的阶数</li>
 <li>初等变换不改变矩阵的秩</li>
+<li>$\mathrm{r}\left(A_{m \times n}\right) \leq \min \{m, n\}$</li>
+<li>$\mathrm{r}\left(\left[\begin{array}{cc}A &amp; O \\O &amp; B\end{array}\right]\right)=\mathrm{r}(A)+\mathrm{r}(B)$</li>
+<li>$\mathrm{r}\left(\left[\begin{array}{cc}A &amp; O \\C &amp; B\end{array}\right]\right)\ge\mathrm{r}(A)+\mathrm{r}(B)$</li>
+<li>$\mathrm{r}(A)+\mathrm{r}(B)-n \le \mathrm{r}(A B) \le \min \{\mathrm{r}(A), \mathrm{r}(B)\}$</li>
+<li>伴随矩阵的秩：设A是n阶方阵，$A^{*}$是A的伴随矩阵，则<script type="math/tex; mode=display">
+r\left(A^{*}\right)=\left\{\begin{array}{ll}
+n, & r(A)=n \\
+1, & r(A)=n-1 \\
+0, & r(A)<n-1
+\end{array}\right.</script></li>
 </ul>
 </li>
 </ul>
@@ -594,17 +646,16 @@ P_{2} B Q_{2}=C
 <li>若$I_m-AB$可逆，则$(I_n-BA)^{-1}=I_n+B(I_m-AB)^{-1}A$</li>
 <li>$|I_m-AB|=|I_n-BA|$</li>
 <li>若$m=n$，$AB=I$，则$BA=I$</li>
-<li>若$m&gt;n$，$AB=I_m$，则$BA=I_n$</li>
-<li>若$m&lt;n$，$AB=I_m$，则不一定有$BA=I_n$</li>
+<li>若$m\ne n$，不存在$AB=I_m$（用秩来证）</li>
 <li>$tr(AB)=tr(BA)$</li>
-<li>$|\lamda I_m-AB|=\lamda^{m-n}|\lamda I_n-BA|$</li>
+<li>$|\lambda I_m-AB|=\lambda^{m-n}|\lambda I_n-BA|$</li>
 <li>若$|BA|\ne 0$，则$AB$可对角化的充要条件是$BA$可对角化</li>
 <li>$r(I_m-AB)+n=r(I_n-BA)+m$</li>
 </ul>
 </li>
 </ul>
 <h3 id="用函数解线代题"><a href="#用函数解线代题" class="headerlink" title="用函数解线代题"></a>用函数解线代题</h3><p><img src="https://i.loli.net/2021/10/27/GYrCh98bqM7jtHS.png" srcset="/img/loading.gif" lazyload alt=""></p>
-
+<h3 id="回归源头：矩阵与方程组解的联系"><a href="#回归源头：矩阵与方程组解的联系" class="headerlink" title="回归源头：矩阵与方程组解的联系"></a>回归源头：矩阵与方程组解的联系</h3>
             </div>
             <hr>
             <div>
