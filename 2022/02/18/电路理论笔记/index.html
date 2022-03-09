@@ -1,0 +1,1012 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/doge.png">
+  <link rel="icon" href="/img/doge.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#3A6A99">
+  <meta name="description" content="">
+  <meta name="author" content="SZY">
+  <meta name="keywords" content="">
+  
+  <title>电路理论笔记 - SZY的Hexo博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/myiconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"sjtu-szy.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>SZY的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/qixi1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="电路理论笔记">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-02-18 14:22" pubdate>
+        2022年2月18日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      66
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">电路理论笔记</h1>
+            
+            <div class="markdown-body">
+              <h1 id="第一章-基本概念和基本规律"><a href="#第一章-基本概念和基本规律" class="headerlink" title="第一章 基本概念和基本规律"></a>第一章 基本概念和基本规律</h1><h2 id="电路和电路模型"><a href="#电路和电路模型" class="headerlink" title="电路和电路模型"></a>电路和电路模型</h2><h3 id="实际电路与电路模型"><a href="#实际电路与电路模型" class="headerlink" title="实际电路与电路模型"></a>实际电路与电路模型</h3><ul>
+<li>实际电路：是由电的器件相互联接所构成的电流的通路。复杂的电路，又称网络。</li>
+<li>电路模型：将实际电路中各个部件用其模型符号表示而画出的图形，也简称为电路。</li>
+<li>实际电路的符号表示：在电路理论中将电阻器、电容器、灯泡、晶体管、变压器等实际器件用理想的模型符号表示。</li>
+</ul>
+<h3 id="集中参数电路与集中参数元件"><a href="#集中参数电路与集中参数元件" class="headerlink" title="集中参数电路与集中参数元件"></a>集中参数电路与集中参数元件</h3><ul>
+<li>集中参数元件：当实际电路的尺寸远小于其使用时电磁量的最高工作频率所对应的波长时，可以不必考虑电磁量的空间分布，相应的电路元件称为集中参数元件。</li>
+<li>集中参数电路：由集中参数元件组成的电路。集中参数电路可以看成电磁空间的一个点，电路变量是时间的函数。</li>
+<li>集中参数条件: $d \ll \lambda $</li>
+<li>信号的波长: $\lambda=\frac{c}{f} $</li>
+<li>分布参数电路：电路变量是时间、空间的函数。</li>
+<li>满足集中化条件的电路的性质<ul>
+<li>$\forall t$，流入二端集中参数元件任一端的电流等于从另一端流出的电流，且该元件两个端点上的电位均为确定值（对选定的基准点或称参考点而言）。</li>
+<li>$\forall t$，流入多端集中参数元件任一端点的电流等于从其他端点流出电流之和，且其任一端点上的电位均为确定值（对选定的基准点而言）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="电路变量"><a href="#电路变量" class="headerlink" title="电路变量"></a>电路变量</h2><h3 id="电流"><a href="#电流" class="headerlink" title="电流"></a>电流</h3><ul>
+<li>定义：电流即电流强度</li>
+<li>单位：电流的单位是安培（A），简称安。</li>
+</ul>
+<h3 id="电流的参考方向"><a href="#电流的参考方向" class="headerlink" title="电流的参考方向"></a>电流的参考方向</h3><ul>
+<li>电流的实际方向：规定为正电荷运动的方向。</li>
+<li>电流的参考方向：假定为正电荷运动的方向。</li>
+<li>规定：若二者方向一致，电流为正，反之，电流为负。</li>
+<li>分析电路时，应首先设定参考方向！</li>
+</ul>
+<h3 id="电压"><a href="#电压" class="headerlink" title="电压"></a>电压</h3><ul>
+<li>定义：电压即电路中两点之间的电位差，用u表示</li>
+<li>单位：电压的单位为伏特（V）。</li>
+<li>电压的实际方向：电位真正降低的方向。</li>
+<li>电压的参考方向：假设的电位降低的方向。</li>
+<li>分析电路时，应首先设定参考方向！</li>
+</ul>
+<h3 id="关联参考方向"><a href="#关联参考方向" class="headerlink" title="关联参考方向"></a>关联参考方向</h3><p>若电流的流向是从电压的“+”极流向“-”极，则称为关联参考方向；反之为非关联参考方向。</p>
+<ul>
+<li>分析电路时，一般设定关联参考方向！</li>
+</ul>
+<h3 id="功率和能量"><a href="#功率和能量" class="headerlink" title="功率和能量"></a>功率和能量</h3><ul>
+<li>定义：电场力做功的速率。取关联参考方向时，一段支路吸收的功率为<script type="math/tex; mode=display">
+p=\frac{\mathrm{d}w}{\mathrm{d}t}=\frac{\mathrm{d}w}{\mathrm{d}q}\frac{\mathrm{d}q}{\mathrm{d}t}=u(t)i(t)</script>（非关联参考方向时 $p=-u(t)i(t)$ ）</li>
+<li>单位：功率的单位为瓦特（W）</li>
+<li>功率是代数量：<ul>
+<li>$p&gt;0$，电路吸收能量，$p$ 为吸收的功率</li>
+<li>$p&lt;0$，电路提供能量，$p$ 为发出的功率</li>
+</ul>
+</li>
+<li>电路吸收的能量为 $w\left(t_{0}, t\right)=\int_{t_{0}}^{t} p(\xi) \mathrm{d} \xi=\int_{t_{0}}^{t} u(\xi) i(\xi) \mathrm{d} \xi$ ，能量的单位为焦耳（J）</li>
+</ul>
+<h2 id="电路基本规律"><a href="#电路基本规律" class="headerlink" title="电路基本规律"></a>电路基本规律</h2><h3 id="图论的基础知识"><a href="#图论的基础知识" class="headerlink" title="图论的基础知识"></a>图论的基础知识</h3><ul>
+<li>支路：电路中的每一个二端元件都可抽象为一条线段（直线或曲线），称为支路，数量记为 $b$</li>
+<li>节点：电路中元件的连接点</li>
+<li>图：一组节点和一组支路的集合，且每条支路的两端必须终止在两个节点上。网络图通常用符号 $G$ 表示。</li>
+<li>连通图：在图 $G$ 中的任意两节点之间至少存在一条由支路构成的路径，则称该图为连通图，否则为非连通图。</li>
+<li>有向图和无向图：图中的每一条支路都标有参考方向的图称为有向图，否则称为无向图。</li>
+<li>子图：设有一图 $G$，又有一图 $G_i$ 其每个节点都是 $G$ 中的节点，每条支路是 $G$ 中的支路，则称 $G_i$ 是 $G$ 的子图。</li>
+<li>回路：给定图 $G$ 的一个子图 $G_i$，如果 $G_i$ 是连通的，且其每一个节点仅与两条支路相关联，则称这个子图 $G_i$ 为回路。<ul>
+<li>性质：</li>
+<li>是连通图</li>
+<li>与每个节点关联的支路数恰好是 $2$ 条</li>
+</ul>
+</li>
+<li><p>树：对于任意一个连通图 $G$ ，如果它的子图 $G_i$ 满足</p>
+<ul>
+<li>是连通图</li>
+<li>包含图 $G$ 中的所有节点</li>
+<li>不包含回路</li>
+</ul>
+<p>则称子图 $G_i$ 为 $G$ 的一个树。</p>
+</li>
+<li>树支：构成树的各支路称为树支，数量记为 $b_{\mathrm{t}}$</li>
+<li>连支：除树枝外的支路称为连支，数量记为 $b_{\mathrm{l}}$</li>
+<li>余树（补树）：连支的集合</li>
+<li>平面图与非平面图：设一图 $G$，如果将其画在平面上，且不出现两条支路交叉于一个非节点处，那么称图 $G$ 为平面图，否则称为非平面图。</li>
+<li>网孔：对于<strong>平面图</strong> $G$的任一回路，如果在回路所限定的区域内没有支路，则称该回路为网孔。<ul>
+<li>内网孔：构成的回路内部都不存在支路的回路称为内网孔，简称网孔</li>
+<li>外网孔：构成的回路内部存在支路，但其外部区域不包含支路的回路称为外网孔</li>
+</ul>
+</li>
+<li>割集：连通图 $G$ 的割集是一组不包括节点的支路集合，其满足<ul>
+<li>若移去该集的所有支路，则 $G$ 成为两个独立的部分</li>
+<li>若保留其中任一支路不去掉，剩下的图仍是连通的</li>
+</ul>
+</li>
+<li>基本回路（独立回路）：在选定树之后，如果每次只接上一条连支，就可以形成由一条连支和其他有关树支组成的回路，该回路称为基本回路。一般基本回路的绕行方向与这个连支的参考方向保持一致。</li>
+<li>基本割集：对于任意连通图 $G$ ，选定一个树，每条树枝总能和若干条连枝构成一个割集，将这种仅包含一条树支的割集称为基本割集。</li>
+</ul>
+<h3 id="电路图论的基本结论"><a href="#电路图论的基本结论" class="headerlink" title="电路图论的基本结论"></a>电路图论的基本结论</h3><ul>
+<li>一个图的支路是由树支和连支组成的<script type="math/tex; mode=display">
+b=b_{\mathrm{t}}+b_{\mathrm{l}}</script></li>
+<li>对于一个连通图 $G$，任意选定一个树 $T$，在 $G$ 的任何两个节点之间，总有由 $T$ 的树支组成的唯一路径。</li>
+<li>对于一个具有 $n$ 个节点、$b$ 条支路的连通图 $G$，其树支数必为 $n-1$，其连支数必为 $b-n+1$。</li>
+<li>对于一个具有 $n$ 个节点、$b$ 条支路的连通图 $G$，其基本回路数（独立回路数） $l$ 等于连支数 $b_\mathrm{l}$ 等于（内）网孔数。</li>
+<li>支路数、节点数、基本回路数的关系为<script type="math/tex; mode=display">
+b=n+l-1</script></li>
+<li>对于一个具有 $n$ 个节点、$b$ 条支路的连通图 $G$，基本割集数必为 $n-1$ 个。</li>
+<li>基本割集数必然等于树支数。用 $n_\mathrm{t}$ 表示基本割集数，则有<script type="math/tex; mode=display">
+n_\mathrm{t}=n-1</script></li>
+</ul>
+<h3 id="基尔霍夫电流定律（KCL）"><a href="#基尔霍夫电流定律（KCL）" class="headerlink" title="基尔霍夫电流定律（KCL）"></a>基尔霍夫电流定律（KCL）</h3><p>对于任一集中参数电路中的任一节点，在任一时刻，流入（或流出）该节点的所有支路电流的代数和等于零。</p>
+<script type="math/tex; mode=display">
+\sum i(t)=0</script><ul>
+<li>KCL适用于任何集中参数电路，它与元件的性质无关。</li>
+<li>对任一具有 $n$ 个节点，$b$ 条支路的电路列写KCL方程，所得方程组中的独立方程只有 $n-1$ 个。</li>
+<li>为了得到独立的KCL方程，一般先选定参考节点，然后对参考节点以外的其他 $n-1$ 个节点列写KCL方程，这 $n-1$ 个节点称为独立节点。</li>
+<li>KCL也适用于电路中任一割集或闭合面，在任一时刻，流出（或流入）该割集（或闭合面）的所有支路电流的代数和等于零。</li>
+</ul>
+<h3 id="基尔霍夫电压定律（KVL）"><a href="#基尔霍夫电压定律（KVL）" class="headerlink" title="基尔霍夫电压定律（KVL）"></a>基尔霍夫电压定律（KVL）</h3><p>对于任一集中参数电路中的任一回路，在任一时刻，沿该回路所有支路电压的代数和等于零。</p>
+<script type="math/tex; mode=display">
+\sum u(t)=0</script><ul>
+<li>KVL适用于任何集中参数电路，它与元件的性质无关。</li>
+<li>对任一具有 $n$ 个节点，$b$ 条支路的电路列写KVL方程，其独立方程数等于独立回路数。独立的KVL方程数为 $b-(n-1)$。</li>
+</ul>
+<h3 id="电路的两类约束"><a href="#电路的两类约束" class="headerlink" title="电路的两类约束"></a>电路的两类约束</h3><ul>
+<li>拓扑约束：取决于元件的相互连接方式<ul>
+<li>节点电流受 KCL 约束</li>
+<li>回路电压受 KVL 约束</li>
+</ul>
+</li>
+<li>元件约束（VCR）：取决于元件本身的特性</li>
+</ul>
+<h3 id="关联矩阵"><a href="#关联矩阵" class="headerlink" title="关联矩阵"></a>关联矩阵</h3><p>节点-支路关联矩阵：描述图中节点对支路的关联关系的矩阵，简称关联矩阵<br>对于一个具有 $n$ 个节点、$b$ 条支路的有向图，定义关联矩阵 $\boldsymbol{A}_{\mathrm{a}}=\left[a_{i k}\right]_{n \times b}$，其中行号对应节点，列号对应支路，矩阵的第 $(i, k)$ 个元素 $a_{i k}$ 定义为</p>
+<script type="math/tex; mode=display">
+a_{i k}=\left\{
+  \begin{aligned} 
+  1 & \text { 支路 } k \text { 与节点 } i \text{ 相关联，且其方向离开节点(i) } \\
+  -1 & \text { 支路 } k \text { 与节点 } i \text{ 相关联，且其方向指向节点(i) } \\ 
+  0 & \text { 支路 } k \text { 与节点 } i \text{ 无关联 } 
+  \end{aligned}
+\right.</script><h3 id="降阶关联矩阵"><a href="#降阶关联矩阵" class="headerlink" title="降阶关联矩阵"></a>降阶关联矩阵</h3><p>可以证明，一个连通图的 $\boldsymbol{A}_{\mathrm{a}}$ 的秩为 $n-1$，即 $\boldsymbol{A}_{\mathrm{a}}$ 中的任意一行都可由其他的 $n-1$ 行来确定。因此，可以把 $\boldsymbol{A}_{\mathrm{a}}$ 中的任意一行删去，得到一个具有 $n-1$ 行和 $b$ 列的矩阵，其秩为 $n-1$，称为降阶关联矩阵，通常记为 $\boldsymbol{A}$</p>
+<h3 id="网孔矩阵"><a href="#网孔矩阵" class="headerlink" title="网孔矩阵"></a>网孔矩阵</h3><p>网孔矩阵：用来描述有向图网孔与支路之间连接关系的全部信息的矩阵<br>对于一个具有 $n$ 个节点、$b$ 条支路的有向图，定义一个矩阵 $\boldsymbol{M}_{\mathrm{m}}=\left[m_{ik}\right]_{(b-n+2)\times b}$，其中行号对应网孔，列号对应支路，矩阵的第 $(i,k)$ 个元素 $m_{ik}$ 定义为</p>
+<script type="math/tex; mode=display">
+m_{i k}=\left\{
+  \begin{aligned}
+  1 & \text { 支路 } k \text { 与网孔 } i \text { 相关联, 且其方向与网孔 } i \text { 一致 } \\
+  -1 & \text { 支路 } k \text { 与网孔 } i \text { 相关联, 且其方向与网孔 } i \text { 相反 } \\
+  0 & \text { 支路 } k \text { 与网孔 } i \text { 无关联 }
+  \end{aligned}
+\right.</script><h3 id="降价网孔矩阵"><a href="#降价网孔矩阵" class="headerlink" title="降价网孔矩阵"></a>降价网孔矩阵</h3><p>与关联矩阵类似，网孔矩阵 $\boldsymbol{M}_{\mathrm{m}}$ 的各行也不是相互独立的。可以证明，一个连通图的 $\boldsymbol{M}_{\mathrm{m}}$ 的秩为 $b-n+1$，即 $\boldsymbol{M}_{\mathrm{m}}$ 中的任意一行都可由其他的 $b-n+1$ 行来确定。因此，可以把 $\boldsymbol{M}_{\mathrm{m}}$ 中的任意一行删去，便得到一个具有 $b-n+1$ 行和 $b$ 列的矩阵，其秩为 $b-n+1$，称为降阶网孔矩阵，记为 $\boldsymbol{M}$。</p>
+<h3 id="KCL用降阶关联矩阵表示"><a href="#KCL用降阶关联矩阵表示" class="headerlink" title="KCL用降阶关联矩阵表示"></a>KCL用降阶关联矩阵表示</h3><p>如果引入支路电流向量 $\boldsymbol{i}_b=[i_1,i_1,\cdots,i_b]^{\mathrm{T}}$ ，则可以得到KCL方程的矩阵形式为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{A}\boldsymbol{i}_b=\mathbf{0}</script><h3 id="KVL用降阶关联矩阵表示"><a href="#KVL用降阶关联矩阵表示" class="headerlink" title="KVL用降阶关联矩阵表示"></a>KVL用降阶关联矩阵表示</h3><p>如果引入支路电压向量 $\boldsymbol{u}_{\mathrm{b}}=\left[u_{1}, u_{2}, \cdots, u_{b}\right]^{\mathrm{T}}$ 和节点电压向量 $\boldsymbol{u}_{\mathrm{n}}=\left[u_{\mathrm{n} 1}, u_{\mathrm{n} 2}, \cdots, u_{\mathrm{n} n}\right]^{\mathrm{T}}$，则可以得到 KVL 方程的矩阵形式为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{u}_{\mathrm{b}}=\boldsymbol{A}^{\mathrm{T}} \boldsymbol{u}_{\mathrm{n}}</script><h3 id="KCL用降阶网孔矩阵表示"><a href="#KCL用降阶网孔矩阵表示" class="headerlink" title="KCL用降阶网孔矩阵表示"></a>KCL用降阶网孔矩阵表示</h3><p>如果引入网孔电流 $\boldsymbol{i}_{\mathrm{m}}=[i_{\mathrm{m}1},i_{\mathrm{m}2},\cdots,i_{\mathrm{m}(b-n+1)}]^{\mathrm{T}}$ 表示沿着每个网孔边界构成的闭合路径自行流动的假设电流向量，则用降阶网孔矩阵矩阵 $\boldsymbol{M}$ 表示的 KCL 方程的矩阵形式为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{i}_{\mathrm{b}}=\boldsymbol{M}^{\mathrm{T}}\boldsymbol{i}_{\mathrm{m}}</script><h3 id="KVL用降阶网孔矩阵表示"><a href="#KVL用降阶网孔矩阵表示" class="headerlink" title="KVL用降阶网孔矩阵表示"></a>KVL用降阶网孔矩阵表示</h3><p>用降阶网孔矩阵 $\boldsymbol{M}$ 表示的 KVL 方程的矩阵形式为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}\boldsymbol{u}_{\mathrm{b}}=\mathbf{0}</script><h3 id="特勒根定理"><a href="#特勒根定理" class="headerlink" title="特勒根定理"></a>特勒根定理</h3><ul>
+<li><p>形式一：功率定理<br>对于具有 $n$ 个节点和 $b$ 条支路的两个集中参数电路 $\mathrm{N}$，支路电压向量和支路电流向量分别用 $\boldsymbol{u}_{\mathrm{b}}=\left[u_{1}, u_{2}, \cdots, u_{b}\right]^{\mathrm{T}}$、$\boldsymbol{i}_{\mathrm{b}}=\left[i_{1}, i_{2}, \cdots, i_{b}\right]^{\mathrm{T}}$ 表示，支路电压、电流取一致参考方向，则有</p>
+<script type="math/tex; mode=display">
+\sum_{k=1}^{b} u_k(t) i_k(t) = 0</script></li>
+<li><p>形式二：似功率定理<br>对于具有 $n$ 个节点和 $b$ 条支路的两个集中参数电路 $\mathrm{N}$ 和 $\hat{\mathrm{N}}$，它们可以由不同的元件构成，但却有相同的有向图。若二者的支路电压向量和支路电流向量分别用 $\boldsymbol{u}_{\mathrm{b}}=\left[u_{1}, u_{2}, \cdots, u_{b}\right]^{\mathrm{T}}$、$\boldsymbol{i}_{\mathrm{b}}=\left[i_{1}, i_{2}, \cdots, i_{b}\right]^{\mathrm{T}}$ 及 $\hat{\boldsymbol{u}}_{\mathrm{b}}=\left[\hat{u}_{1}, \hat{u}_{2}, \cdots, \hat{u}_{b}\right]^{\mathrm{T}}$、$\hat{\boldsymbol{i}}_{\mathrm{b}}=\left[\hat{i}_{1}, \hat{i}_{2}, \cdots, \hat{i}_{b}\right]^{\mathrm{T}}$ 表示，支路电压、电流取一致参考方向，则有</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+\boldsymbol{u}_{\mathrm{b}}^{\mathrm{T}}\left(t_{1}\right) \hat{\boldsymbol{i}}_{\mathrm{b}}\left(t_{2}\right)=\mathbf{0} \\
+\hat{\boldsymbol{u}}_{\mathrm{b}}^{\mathrm{T}}\left(t_{3}\right) \boldsymbol{i}_{\mathrm{b}}\left(t_{4}\right)=\mathbf{0} \\
+\boldsymbol{u}_{\mathrm{b}}^{\mathrm{T}}\left(t_{5}\right) \boldsymbol{i}_{\mathrm{b}}\left(t_{6}\right)=\mathbf{0} \\
+\hat{\boldsymbol{u}}_{\mathrm{b}}^{\mathrm{T}}\left(t_{7}\right) \hat{\boldsymbol{i}}_{\mathrm{b}}\left(t_{8}\right)=\mathbf{0}
+\end{array}</script></li>
+<li>特勒根定理适用于任何集中参数电路</li>
+<li>特勒根定理反映了电路的互连性质，与电路元件的性质无关。</li>
+</ul>
+<h2 id="电阻电路元件"><a href="#电阻电路元件" class="headerlink" title="电阻电路元件"></a>电阻电路元件</h2><p>一个二端元件，如果在任一时间 $t$，其端钮间的电压（简称端电压） $u$ 和通过其中的电流 $i$ 之间的关系是由 $u-i$ 平面（或i-u平面）上的一条曲线所确定的，则此二端元件称为电阻元件，简称电阻。$u-i$ 平面(或 $i-u$ 平面)上的这条曲线称为电阻在时间 $t$ 的伏安特性曲线。<br>电阻所确定的电压-电流关系又称电阻的伏安特性。在任一时刻 $t$，电阻的伏安特性是一个代数方程</p>
+<script type="math/tex; mode=display">
+f(u,i) = 0</script><p>表达电阻的伏安特性曲线或伏安特性的方程称为电阻特性方程。</p>
+<ul>
+<li><p>电阻分类</p>
+<ul>
+<li>按照电压-电流关系分<ul>
+<li>线性电阻</li>
+<li>非线性电阻</li>
+</ul>
+</li>
+<li>按照电压-电流关系与时间的关系分<ul>
+<li>时变电阻</li>
+<li>非时变电阻</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>电阻元件可以从外界吸收能量，也可以对外发出电能。</p>
+</li>
+</ul>
+<h3 id="线性非时变电阻"><a href="#线性非时变电阻" class="headerlink" title="线性非时变电阻"></a>线性非时变电阻</h3><ul>
+<li>定义：若一个电阻的伏安特性曲线是一条不随时间变化、通过原点的直线，则称为线性非时变电阻。</li>
+<li><p>特性方程：</p>
+<script type="math/tex; mode=display">
+u=Ri\,\text{或}\,i=Gu</script><p>式中：</p>
+<ul>
+<li>电压 $u$ 和电流 $i$ 取一致参考方向</li>
+<li>$R$ 称为电阻[值]，单位是欧[姆] ($\Omega$)，它的大小是电阻伏安特性曲线的斜率</li>
+<li>$G$ 称为电导[值]，单位是西[门子] (S)。</li>
+<li>电阻 $R$ 和电导 $G$ 互为倒数，即 $G=\frac{1}{R}$</li>
+</ul>
+</li>
+<li><p>特点：线性非时变电阻是一种满足欧姆定律的电阻。电阻值和电导值是描述电阻特性的一个参数。</p>
+</li>
+</ul>
+<h3 id="正电阻与负电阻"><a href="#正电阻与负电阻" class="headerlink" title="正电阻与负电阻"></a>正电阻与负电阻</h3><p>上式中的 $R$ 或 $G$ 也可以取负值，此时电阻的伏安特性曲线是一条位于 $i-u$ 平面的第二、四象限内的直线</p>
+<ul>
+<li>把 $R$ 或 $G$ 取负值的电阻称为负电阻</li>
+<li><p>把 $R$ 或 $G$ 取正值的电阻称为正电阻</p>
+</li>
+<li><p>如果对所有时间 $t$，电阻伏安特性曲线位于 $i-u$ 平面的第一、三象限内，则这个电阻必然为正电阻</p>
+</li>
+<li><p>如果对所有时间 $t$，电阻伏安特性曲线位于 $i-u$ 平面的第二、四象限内，则这个电阻必然为负电阻。</p>
+</li>
+<li><p>工程中可以用其他电路器件构成的电路来实现负电阻特性。</p>
+</li>
+</ul>
+<h3 id="短路与开路"><a href="#短路与开路" class="headerlink" title="短路与开路"></a>短路与开路</h3><ul>
+<li>当 $R=0$ 时，不论流经电阻的电流为多大，具两端的电压恒等于零，此时电阻相当于短路，短路的伏安特性曲线就是 $u-i$ 平面上与 $i$ 轴重合的直线。</li>
+<li>当 $G=0$ 时，不论施加电阻两端的电压为多大，流经电阻的电流恒等于零，此时电阻相当于开路，其伏安特性曲线就是 $u-i$ 平面上与 $u$ 轴重合的直线。</li>
+</ul>
+<h3 id="线性时变电阻"><a href="#线性时变电阻" class="headerlink" title="线性时变电阻"></a>线性时变电阻</h3><ul>
+<li>定义：若一个电阻的伏安特性曲线是随时间变化、通过原点的直线，则称为线性时变电阻。</li>
+<li>特性方程<script type="math/tex; mode=display">
+u =R(t)i或i=G(t)</script>上式中，</li>
+<li>$R(t)= \frac{1}{G(t)}$</li>
+<li>$R(t)$ 和 $G(t)$ 分别是时变电阻在时刻 $t$ 的电阻和电导</li>
+</ul>
+<h3 id="理想开关"><a href="#理想开关" class="headerlink" title="理想开关"></a>理想开关</h3><ul>
+<li>理想开关是一种典型的线性时变电阻</li>
+<li>当理想开关 $S$ 被打开时，不管其两端电压为多少，流经S的电流恒为零，即处于开路状态</li>
+<li>当理想开关 $S$ 被合上时，不管流经电流是多少，$S$ 两端的电压恒为零，即处于短路状态。</li>
+<li>一个理想开关总是处于电阻 $R=\infty$ 或 $R=0$ 的状态。</li>
+</ul>
+<h3 id="双向电阻"><a href="#双向电阻" class="headerlink" title="双向电阻"></a>双向电阻</h3><ul>
+<li>定义：线性电阻的伏安特性曲线以原点为对称，称为双向电阻。</li>
+<li>对线性电阻而言，如果点 $(u,i)$ 在伏安特性曲线上，则点 $(-u,-i)$ 也在伏安特性曲线上。</li>
+<li>在实际应用中，那些可用线性电阻来模拟的实际电阻器的两个端钮不需要用标记加以区别，它可以任意地接到具体电路中去。</li>
+</ul>
+<h3 id="电阻元件的功率和能量"><a href="#电阻元件的功率和能量" class="headerlink" title="电阻元件的功率和能量"></a>电阻元件的功率和能量</h3><ul>
+<li><p>线性非时变电阻的功率：</p>
+<script type="math/tex; mode=display">
+p =Ri^2 = Gu^2</script><p>显然，如果 $R、G$ 为正值，则 $p(t)$ 非负，电阻吸收电功率。因此 $R、G$ 为正值的电阻属于<strong>耗能元件</strong></p>
+</li>
+<li><p>线性非时变电阻从时刻 $t_0$ 到时刻 $t$ 所吸收的能量为</p>
+<script type="math/tex; mode=display">
+w\left(t_{0}, t\right)=R \int_{t_{0}}^{t} i^{2}(\tau) \mathrm{d} \tau=G \int_{t_{0}}^{t} u^{2}(\tau) \mathrm{d} \tau</script><p>显然，当 $R、G$ 为正值时，$u (t_0 ,t)$ 非负，表明电阻只吸收电能而不发出电能。</p>
+</li>
+</ul>
+<h4 id="元件的种类"><a href="#元件的种类" class="headerlink" title="元件的种类"></a>元件的种类</h4><ul>
+<li>如果电路元件在所有的时刻 $t$，只吸收能量而不提供能量，则称该电路元件为<strong>无源元件</strong></li>
+<li>如果电路元件不是无源的，则此元件称为<strong>有源元件</strong></li>
+<li>一个电路元件为无源元件的充要条件是：对任意的 $t\ge -\infty$ ，该元件吸收的能量满足<script type="math/tex; mode=display">
+w(-\infty,t)\ge 0</script></li>
+<li><p>既不储存能量又不消耗能量的元件称为<strong>非能元件</strong>，也叫<strong>无损元件</strong></p>
+</li>
+<li><p>正电阻属于无源元件，其吸收的能量以热能等形式向周围空间散失</p>
+</li>
+<li>负电阻属于有源元件，它对外发出电能</li>
+</ul>
+<h3 id="电阻的一词多义"><a href="#电阻的一词多义" class="headerlink" title="电阻的一词多义"></a>电阻的一词多义</h3><p>电阻往往作为电阻元件或电阻值的简称，但在习惯上也指实际的电阻器。</p>
+<h3 id="独立电源"><a href="#独立电源" class="headerlink" title="独立电源"></a>独立电源</h3><ul>
+<li>定义：独立电源是实际电源的理想化电路元件模型，包括（独立）电压源和（独立）电流源。独立电源为实际工作的电路提供能量，在含电阻的电路中有电流流动时，就会不断地消耗能量，该能量就是由独立电源提供的。</li>
+</ul>
+<h3 id="电压源"><a href="#电压源" class="headerlink" title="电压源"></a>电压源</h3><ul>
+<li>电压-电流关系<script type="math/tex; mode=display">
+u=u_s\,(\forall i)</script>式中，$u_s$ 是给定的时间函数。当电压源是直流电源时，$u_s$ 为常数，常用 $U_s$ 表示；当独立电压源是时变电源时，$u$ 是时间 $t$ 的函数。</li>
+</ul>
+<h3 id="电流源"><a href="#电流源" class="headerlink" title="电流源"></a>电流源</h3><ul>
+<li>电压-电流关系<script type="math/tex; mode=display">
+i= i_s\,(\forall u)</script>式中，$i_s$ 是给定的时间函数。当电流源是直流电流源时，$i_s$ 为常数，常用 $I_s$ 表示；当电流源是时变电流源，即 $i_s$ 是时间 $t$ 的函数时。</li>
+</ul>
+<h3 id="电源的功率"><a href="#电源的功率" class="headerlink" title="电源的功率"></a>电源的功率</h3><p>对于独立电源来说，其端口电压和端口电流的参考方向可以任意选取。</p>
+<ul>
+<li>如果端口电压和端口电流取非一致参考方向，则乘积 $ui$ 等于电源所发出的功率</li>
+<li>如果端口电压和端口电流取一致参考方向，则乘积 $ui$ 等于电源所吸收的功率。</li>
+</ul>
+<h3 id="几种基本波形"><a href="#几种基本波形" class="headerlink" title="几种基本波形"></a>几种基本波形</h3><ul>
+<li>独立电源的电压或电流对电路来说是一种输入，或者说是一种<strong>激励</strong>，代表外界对电路的作用。</li>
+<li>独立电源可以是向电路提供电能的能源，也可以是向电路提供信号的<strong>信号源</strong>。</li>
+<li>独立电源的电压或电流一般是随时间变化的，表现为各种各样的<strong>波形</strong>。</li>
+<li>波形是函数在平面上的图形，函数是波形的数学表达式，所以波形和函数这两个概念是等效的。</li>
+</ul>
+<h4 id="直流波形"><a href="#直流波形" class="headerlink" title="直流波形"></a>直流波形</h4><p>数学表达式：</p>
+<script type="math/tex; mode=display">
+f(t)=K</script><p>上式中，$K$ 为常数。直流电压源和直流电流源就可以用直流波形来表示。</p>
+<h4 id="正弦波形"><a href="#正弦波形" class="headerlink" title="正弦波形"></a>正弦波形</h4><p>数学表达式：</p>
+<script type="math/tex; mode=display">
+f(t)= A_{\mathrm{m}} \cos(\omega t + \varphi)</script><p>上式中，</p>
+<ul>
+<li>常数 $A_{\mathrm{m}}$ 称为振幅；</li>
+<li>常数 $\omega$ 称为角频率，单位为 $rad/s$</li>
+<li>常数 $\varphi$ 称为初始相位（初相），单位用弧度或度表示，$\varphi\le 180^{\circ}$。由</li>
+<li>一个正弦波形是由 $A_{\mathrm{m}},\omega,\varphi$ 决定的，三者又称为<strong>正弦波形的三要素</strong>。</li>
+<li>正弦波形也可以用余弦函数来表示</li>
+<li>当 $\omega=0$ 时，正弦波形变成一个常量，因此直流波形可看作正弦波形的特例。</li>
+</ul>
+<h4 id="单位阶跃波形"><a href="#单位阶跃波形" class="headerlink" title="单位阶跃波形"></a>单位阶跃波形</h4><p>单位阶跃波形的数学表达形式是<strong>单位阶跃函数</strong>，用符号 $\varepsilon(t)$ 来表示，其定义为</p>
+<script type="math/tex; mode=display">
+\varepsilon(t)=\left\{\begin{array}{ll}
+0 & \quad t<0 \\
+1 & \quad t>0
+\end{array}\right.</script><p>$\varepsilon(t)$ 是奇异函数，$t=0$ 时无定义，一般可取 $0、1$ 或 $1/2$</p>
+<ul>
+<li>延迟单位阶跃波形<script type="math/tex; mode=display">
+\varepsilon(t-t_0)=\left\{\begin{array}{ll}
+0 & \quad t<t_0 \\
+1 & \quad t>t_0
+\end{array}\right.</script></li>
+<li>单位阶跃函数具有信号起始作用，可以用来规定任意波形的起始点</li>
+<li>单位阶跃函数也称为开关函数</li>
+<li>单位阶跃函数还可以用来表示其他的波形或函数，比如 $f(t)=A_{\mathrm{m}}\sin\omega t\cdot\varepsilon(t)$</li>
+</ul>
+<h4 id="单位脉冲波形"><a href="#单位脉冲波形" class="headerlink" title="单位脉冲波形"></a>单位脉冲波形</h4><p>单位脉冲波形的数学表达形式是单位脉冲函数</p>
+<script type="math/tex; mode=display">
+p_{\Delta}(t)=\left\{\begin{array}{lc}
+0 & t<0 \\
+\frac{1}{\Delta} & 0<t<\Delta \\
+0 & \Delta<t
+\end{array}\right.</script><p>式中，$\Delta$ 为任意常数。可以看出，波形包含的面积正好为1。</p>
+<h4 id="单位冲激波形"><a href="#单位冲激波形" class="headerlink" title="单位冲激波形"></a>单位冲激波形</h4><p>单位冲激波形的数学表达形式是单位冲激函数，又称狄拉克函数，用符号 $\delta(t)$ 表示，其定义为</p>
+<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+\delta(t)=0 \quad t \neq 0 \\
+\int_{-\infty}^{\infty} \delta(t) \mathrm{d} t=1
+\end{array}\right.</script><p>上式中的积分值 $1$，称为冲激函数的强度</p>
+<ul>
+<li>延迟单位冲激函数<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+\delta(t)=0 \quad t \neq t_0 \\
+\int_{-\infty}^{\infty} \delta(t) \mathrm{d} t=1
+\end{array}\right.</script></li>
+<li><p>冲激函数的性质</p>
+<ul>
+<li><p>筛分性质<br>对任一在 $t=t_0$ 处连续的函数 $f(t)$ 满足</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty} f(t) \delta(t-t_0) \mathrm{d} t=f(t_0)</script><p>结论：用一单位冲激函数去乘某一函数并进行积分，其结果等于被乘函数在单位冲激函数所在处的数值。这称为冲激函数的筛分性质（或抽样性质）。筛分性质是单位冲激函数特有的性质。</p>
+</li>
+<li><p>冲激函数可以用来表示一个任意波形。任意形状的波形 $f(t)$ 可以表示成</p>
+<script type="math/tex; mode=display">
+f(t)=\int_{0}^{t} f(\tau) \delta(t-\tau) \mathrm{d} \tau</script><p>即任意波形可表示成由无限多个强度各异并依次连续出现的冲激波形（冲激序列）所组成。</p>
+</li>
+<li><p>冲激函数是阶跃函数的导数，阶跃函数是冲激函数的积分。</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d}}{\mathrm{d} t} \varepsilon(t)=\delta(t)</script></li>
+</ul>
+</li>
+<li><p>单位斜坡函数<br>对单位阶跃函数积分可得单位斜坡函数 $r(t)$</p>
+<script type="math/tex; mode=display">
+r(t)=\int_{-\infty}^t \varepsilon(\tau)\mathrm{d}\tau</script><p>或者</p>
+<script type="math/tex; mode=display">
+\varepsilon(t)=\frac{\mathrm{d}r(t)}{\mathrm{d}t}</script></li>
+<li><p>单位对偶冲激函数<br>若对单位冲激函数求导，则可得单位对偶冲激函数 $\delta^{\prime}(t)$</p>
+<script type="math/tex; mode=display">
+\delta^{\prime}(t)=\frac{\mathrm{d} \delta(t)}{\mathrm{d} t}</script><p>或</p>
+<script type="math/tex; mode=display">
+\delta(t)=\int_{-\infty}^{t} \delta^{\prime}\left(t^{\prime}\right) \mathrm{d} t^{\prime}</script></li>
+</ul>
+<h3 id="受控电源"><a href="#受控电源" class="headerlink" title="受控电源"></a>受控电源</h3><p>与独立电源不同，受控电源的输出波形受到电路中其他支路的电压或电流控制，也称为非独立电源。</p>
+<h4 id="电压控制型电流源-VCCS"><a href="#电压控制型电流源-VCCS" class="headerlink" title="电压控制型电流源(VCCS)"></a>电压控制型电流源(VCCS)</h4><p> 简称压控电流源</p>
+<ul>
+<li>特性方程：<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+i_1=0 \\
+i_2=\text{g}u_1
+\end{array}\right.</script>上式中，$\text{g}=i_2/u_1$，称为转移电导</li>
+<li><p>电路图</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/oiol"><img src="/img/circuit/vccs.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+</ul>
+<h4 id="电流控制型电流源-CCCS"><a href="#电流控制型电流源-CCCS" class="headerlink" title="电流控制型电流源(CCCS)"></a>电流控制型电流源(CCCS)</h4><p> 简称流控电流源</p>
+<ul>
+<li>特性方程：<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+u_1=0 \\
+i_2=\beta i_1
+\end{array}\right.</script>上式中，$\beta=i_2/i_1$，称为转移电流比</li>
+<li><p>电路图</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/h0tj"><img src="/img/circuit/cccs.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+</ul>
+<h4 id="电压控制型电压源-VCVS"><a href="#电压控制型电压源-VCVS" class="headerlink" title="电压控制型电压源(VCVS)"></a>电压控制型电压源(VCVS)</h4><p> 简称压控电压源</p>
+<ul>
+<li>特性方程：<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+i_1=0 \\
+u_2=\mu u_1
+\end{array}\right.</script>上式中，$\mu=u_2/u_1$，称为转移电压比</li>
+<li><p>电路图</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/8r76"><img src="/img/circuit/vcvs.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+</ul>
+<h4 id="电流控制型电压源-CCVS"><a href="#电流控制型电压源-CCVS" class="headerlink" title="电流控制型电压源(CCVS)"></a>电流控制型电压源(CCVS)</h4><p> 简称流控电压源</p>
+<ul>
+<li>特性方程：<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+u_1=0 \\
+u_2=ri_1
+\end{array}\right.</script>上式中，$r=u_2/i_1$，称为转移电阻</li>
+<li><p>电路图</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/wafo"><img src="/img/circuit/ccvs.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+</ul>
+<ul>
+<li>电路图中的受控电源，一般只在受控电源的符号旁边标明控制关系</li>
+</ul>
+<h4 id="受控电源吸收的功率"><a href="#受控电源吸收的功率" class="headerlink" title="受控电源吸收的功率"></a>受控电源吸收的功率</h4><script type="math/tex; mode=display">
+p=u_2 i_2</script><h4 id="受控电源与独立电源"><a href="#受控电源与独立电源" class="headerlink" title="受控电源与独立电源"></a>受控电源与独立电源</h4><p>两者都是有源元件，都能对外提供能量。独立电源本身能向电路提供能量，而受控电源向电路提供的能量来自于使该受控电源正常工作的外加独立电源，这是两者本质的区别。</p>
+<h3 id="运算放大器"><a href="#运算放大器" class="headerlink" title="运算放大器"></a>运算放大器</h3><p>运放的符号及其输入输出特性曲线如图所示，其中图(a)中标注 $+U$ 和 $-U$ 字样的两个端钮是供接入直流工作电源的。$u_{-},u_{+},u_\mathrm{o}$ 分别是运放相应端钮对参考节点的电压。电压 $u_{i}=u_{+}-u_{-}$ 为差分输人电压，$u_\mathrm{o}$ 为输出电压。“$u_{-}$”对应“-”端钮，当输入 $u_{-}$ 单独加于该端钮时，输出电压 $u_\mathrm{o}$ 与输入电压 $u_{-}$ 反相，故称它为反相输入端。“$u_{+}$”对应“+”端钮，当输入 $u_{+}$ 单独由该端加入时，输出电压 $u_\mathrm{o}$ 与输入电压 $u_{+}$ 同相，故称它为同相输入端。在分析含运算放大器的电路时，可以不考虑工作电源，采用图(b)所示的电路符号。</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/erxt"><img src="/img/circuit/运算放大器.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+<p>运放的输入-输出特性如图(c)所示。如果运放工作于图中的线性区，其斜率 $A=E_s/\varepsilon$，称为运放的开环增益，此时运放的输出</p>
+<script type="math/tex; mode=display">
+u_\mathrm{o}=Au_i=A(u_{+}-u_{-})</script><p>因此，上图所示的运放可以用压控电压源来模拟</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/f411"><img src="/img/circuit/运放原理图.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+<p>其中：$R_\mathrm{i}$ 表示运算放大器两输入端间的输入电阻，$R_\mathrm{o}$ 运算放大器的输出电阻。</p>
+<p>线性区的范围是非常小的，如果运放在使用时不采取措施，则当运放受到干扰时 $u_\mathrm{i}$ 很容易超出线性区范围而使运放进入饱和区。常常采用负反馈的方式使运放稳定地工作在线性区。所谓负反馈，是指<strong>将一部分输出引到运放的反相输入端</strong>。如果将一部分输出引到运放的同相输入端，则称为正反馈。采用正反馈连接方式的运放一般工作在饱和区。运放在很多应用场合都采用反馈的连接方式。</p>
+<h4 id="理想运放"><a href="#理想运放" class="headerlink" title="理想运放"></a>理想运放</h4><ul>
+<li>定义：理想运放指具有下列参数的运放<script type="math/tex; mode=display">
+\begin{array}{c}
+R_\mathrm{i}=\infty\\
+R_\mathrm{o}=0\\
+A\to\infty
+\end{array}</script></li>
+<li><p>电路符号<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/g3yn"><img src="/img/circuit/理想运放.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+<li><p>重要特性</p>
+<ul>
+<li>虚短<br>因为 $A\to\infty$，由于 $u_\mathrm{o}$ 为有限值，则 $u_\mathrm{i}\to 0$，两个输入端之间相当于短路，称为<strong>虚短路</strong>。在同相输入端接地的情况下，反相输入端与地同电位，称为<strong>虚地</strong>。</li>
+<li>重要特性：虚断<br>因为 $R_\mathrm{i}\to\infty$，输入电流等于零，即从输入端看进去，元件相当于开路，称为<strong>虚断路</strong><br>如果将理想运放工作在非线性区，虚短特性不成立，虚断特性成立。</li>
+</ul>
+</li>
+<li><p>应用</p>
+<ul>
+<li>反相放大器<ul>
+<li>电路图<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/3m5t"><img src="/img/circuit/反相放大器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></li>
+<li>电压电流关系<script type="math/tex; mode=display">
+\frac{u_\mathrm{o}}{u_\mathrm{S}}=-\frac{R_\mathrm{f}}{R_\mathrm{S}}</script></li>
+</ul>
+</li>
+<li>同相放大器<ul>
+<li>电路图<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/rm0w"><img src="/img/circuit/同相放大器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></li>
+<li>电压电流关系<script type="math/tex; mode=display">
+\frac{u_\mathrm{o}}{u_\mathrm{S}}=1+\frac{R_\mathrm{f}}{R_1}</script></li>
+</ul>
+</li>
+<li>电源转换器<ul>
+<li>电路图<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/r5vo"><img src="/img/circuit/电源转换器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></li>
+<li>电压电流关系<script type="math/tex; mode=display">
+i_\mathrm{L}=\frac{u_\mathrm{S}}{R_\mathrm{S}}</script></li>
+</ul>
+</li>
+<li>电压跟随器<ul>
+<li>电路图<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/ebsv"><img src="/img/circuit/电压跟随器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></li>
+<li>电压电流关系<script type="math/tex; mode=display">
+u_\mathrm{o}=u_1</script></li>
+<li>特性<br>电压跟随器可以起隔离作用，负载不会影响输出电压的大小。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="理想变压器"><a href="#理想变压器" class="headerlink" title="理想变压器"></a>理想变压器</h3><p>理想变压器是铁芯变压器的理想化模型，它的唯一参数只是一个称之为变比的常数 $n$。若变压器的一次侧匝数为 $N_1$，二次侧匝数为 $N_2$，则变比 $n=\frac{N_1}{N_2}$。</p>
+<p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/rtau"><img src="/img/circuit/变压器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+<p>图中标有“·”的两个端钮称为同名端，用来表示线圈的相互位置和绕向关系。</p>
+<ul>
+<li><p>理想变压器用受控电源表示的模型<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/ueam"><img src="/img/circuit/理想变压器用受控电源表示.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+<li><p>理想变压器是非能元件</p>
+</li>
+<li>理想变压器的电阻(阻抗)变换性质<script type="math/tex; mode=display">
+\frac{u_1}{i_1}=n^2R_\mathrm{L}</script></li>
+</ul>
+<h3 id="负转换器"><a href="#负转换器" class="headerlink" title="负转换器"></a>负转换器</h3><p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/n5gc"><img src="/img/circuit/负转换器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+<ul>
+<li><p>负转换器用受控源表示<br><a target="_blank" rel="noopener" href="http://47.100.52.206/short/8hzs"><img src="/img/circuit/负转换器用受控源表示.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a></p>
+</li>
+<li><p>性质<br>一个具有正电阻的电阻元件可以通过负转换器转换成一个具有负电阻的电阻元件。由于具有正电阻值的电阻元件为无源元件，而具有负电阻值的电阻元件为有源元件，因此负转换器是一种能把无源元件转换成有源元件的电路元件。</p>
+</li>
+</ul>
+<h3 id="理想回转器"><a href="#理想回转器" class="headerlink" title="理想回转器"></a>理想回转器</h3><p><a target="_blank" rel="noopener" href="http://47.100.52.206/short/8896"><img src="/img/circuit/理想回转器.drawio.png" srcset="/img/loading.gif" lazyload style="margin:0"/></a><br>上式中，$r$ 和 $g$ 分别称为回转电阻和回转电导，简称回转比，为常数，$gr=1$。</p>
+<ul>
+<li>理想回转器既不损耗又不存储能量，是一种无源元件（无损元件）</li>
+<li>如果在回转器输出端口接上一个线性非时变电阻 $R$，则可以得到<script type="math/tex; mode=display">
+\frac{u_1}{i_1}=\frac{r^2}{R}=r^2G</script></li>
+<li>回转器的重要应用之一是实现电感和电容之间的回转</li>
+</ul>
+<h3 id="支路分析法"><a href="#支路分析法" class="headerlink" title="支路分析法"></a>支路分析法</h3><p>略</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">大学学习生活</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/%E7%94%B5%E8%B7%AF/">电路</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%94%B5%E8%B7%AF/">电路</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/02/22/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E7%BB%AA%E8%AE%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">大学物理实验绪论笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/17/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">大学物理笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'sjtu-szy/blog-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

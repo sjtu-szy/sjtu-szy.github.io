@@ -53,6 +53,10 @@
 
 <!-- 自定义样式保持在最底部 -->
 
+  
+<link rel="stylesheet" href="/css/myiconfont.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -276,9 +280,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/03/%E6%96%B0%E6%99%8B%E6%B8%85%E5%8D%8E%E5%AD%A6%E9%95%BF%E7%9A%84%E6%95%99%E8%AF%B2/">
+                      <a href="/2021/08/31/%E5%85%B3%E4%BA%8E%E6%88%91/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【学霸时间】tyx学长教你学习</span>
+                        <span class="hidden-mobile">我的高中学习碎碎念</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -304,20 +308,29 @@
                   
                 
                 
-  <div id="SOHUCS" sid='https://sjtu-szy.github.io/2021/08/22/2021%E5%AD%A6%E5%B9%B4%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F%E6%A8%A1%E6%8B%9F%E9%A2%98%E5%90%88%E9%9B%86/'></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      var appid = 'cyvDEHr2F';
-      var conf = '9b18c961fbe425448b8d1aaeff95d251';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
       } else {
-        Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-          window.changyan.api.config({"appid":"cyvDEHr2F","appkey":"9b18c961fbe425448b8d1aaeff95d251"})
-        });
+        schema = light;
       }
-    });
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'sjtu-szy/blog-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

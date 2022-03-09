@@ -1,0 +1,1027 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/doge.png">
+  <link rel="icon" href="/img/doge.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#3A6A99">
+  <meta name="description" content="">
+  <meta name="author" content="SZY">
+  <meta name="keywords" content="">
+  
+  <title>大学物理笔记 - SZY的Hexo博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/myiconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"sjtu-szy.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>SZY的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/qixi1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="大学物理笔记">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-02-17 09:15" pubdate>
+        2022年2月17日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      109
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">大学物理笔记</h1>
+            
+            <div class="markdown-body">
+              <h2 id="第一章-力与运动"><a href="#第一章-力与运动" class="headerlink" title="第一章 力与运动"></a>第一章 力与运动</h2><h3 id="矢量基本知识"><a href="#矢量基本知识" class="headerlink" title="矢量基本知识"></a>矢量基本知识</h3><ul>
+<li>有大小、方向，且服从平行四边形运算法则的量</li>
+<li>线段长度表示大小；箭头表示方向。</li>
+<li>矢量的大小称为矢量的模，记为 $a=\left|\overrightarrow{a}\right|$</li>
+<li>单位方向矢量 $\overrightarrow{e_a}=\frac{\overrightarrow{a}}{a}$</li>
+<li>两矢量的点乘 = 两量大小与它们夹角余弦的乘积</li>
+<li>两矢量叉乘：大小$ab\sin\varphi$；方向由右手螺旋规则确定</li>
+</ul>
+<h3 id="国际单位制（SI）"><a href="#国际单位制（SI）" class="headerlink" title="国际单位制（SI）"></a>国际单位制（SI）</h3><ul>
+<li>1 m是光在真空中(1/299 792 458)s时间间隔内所经路径的长度。</li>
+<li>1s是铯的一种同位素133 Cs原子发出的一个特征频率光波周期的9 192 631 770倍。</li>
+<li>千克用基本物理常数普朗克常数h定义。</li>
+<li>安培用电子电荷定义。</li>
+<li>开尔文用玻尔兹曼常数定义。</li>
+<li>摩尔用阿伏伽德罗常数定义。</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{array}{llc}
+\hline \text { 量的名称 } & \text { 单位名称 } & \text { 单位符号 } \\
+\hline \text { 长度 } & \text { 米 } & \mathrm{m} \\
+\text { 质量 } & \text { 千克 (公斤) } & \mathrm{kg} \\
+\text { 时间 } & \text { 秒 } & \mathrm{s} \\
+\text { 电流 } & \text { 安 [培] } & \mathrm{A} \\
+\text { 热力学温度 } & \text { 开[尔文] } & \mathrm{K} \\
+\text { 物质的量 } & \text { 摩[尔] } & \mathrm{mol} \\
+\text { 发光强度 } & \text { 坎[德拉] } & \mathrm{cd} \\
+\hline
+\end{array}</script><h3 id="物理量的单位与量纲"><a href="#物理量的单位与量纲" class="headerlink" title="物理量的单位与量纲"></a>物理量的单位与量纲</h3><p>略</p>
+<h3 id="参考系"><a href="#参考系" class="headerlink" title="参考系"></a>参考系</h3><ul>
+<li>定义：为描述物体的运动而选择的标准物体。  </li>
+<li>运动具有绝对性，运动的描述具有相对性。</li>
+<li>在不同参考系中对同一物体运动的描述不同。</li>
+<li>参考系的选择是任意的</li>
+<li>描述物体的运动时，必须指明参考系</li>
+<li>若不指明参考系，则认为以地面为参考系</li>
+</ul>
+<h3 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h3><ul>
+<li>由固结在参考系上的一组有刻度的射线、曲线或角度表示。</li>
+<li>坐标系为参考系的数学抽象（两者相对静止）</li>
+<li>坐标系可任选，以描述方便为原则</li>
+<li>在同一参考系中，用不同的坐标系描述同一物体的运动时，其数学表述与坐标系的选择有关。</li>
+<li>常用的坐标系：<ul>
+<li>直角坐标系</li>
+<li>自然坐标系</li>
+<li>极坐标系</li>
+</ul>
+</li>
+</ul>
+<h3 id="质点"><a href="#质点" class="headerlink" title="质点"></a>质点</h3><ul>
+<li>定义：没有大小和形状,只有质量的理想化的物体</li>
+<li>条件：一个物体能否看作质点，它的唯一标准是物体的形状、大小与所研究的问题是否无关。可以将物体简化为质点的两种情况：<ul>
+<li>平动物体各点的运动状态完全相同</li>
+<li>物体本身线度和它活动范围相比小得很多(此时物体的变形及转动显得并不重要)。</li>
+</ul>
+</li>
+<li>质点是经过科学抽象而形成的理想化的物理模型。目的是为了突出研究对象的主要性质，暂不考虑一些次要的因素。</li>
+</ul>
+<h3 id="空间和时间"><a href="#空间和时间" class="headerlink" title="空间和时间"></a>空间和时间</h3><ul>
+<li>空间：反映物质运动的广延性，表示物理系统存在的延展及其各部分间的邻接。</li>
+<li>长度：空间中两点间的距离</li>
+<li>宇观尺度的长度单位:<ul>
+<li>太阳系内天体距离常用的长度单位<br>$\mathrm{AU}$，日地距离，$1\,\mathrm{AU}=1.495 978 70 \times 10^{11}\,\mathrm{m}$</li>
+<li>太阳系外天体距离常用的长度单位<br>光年，光在一年里传播的距离，$1\text{ 光年}=9.460 530 \times 10^{15}\,\mathrm{m}$</li>
+</ul>
+</li>
+<li>时间：事件发生的次序性。</li>
+<li>时间间隔：两个时刻之间的间隔</li>
+</ul>
+<h3 id="位置矢量"><a href="#位置矢量" class="headerlink" title="位置矢量"></a>位置矢量</h3><p>定义：从原点$O$向质点$P$所在位置作一矢量来表示质点位置。该矢量称为<strong>位置矢量</strong>，简称<strong>位矢</strong>。</p>
+<script type="math/tex; mode=display">
+\vec{r}=\overrightarrow{OP}</script><h3 id="运动方程"><a href="#运动方程" class="headerlink" title="运动方程"></a>运动方程</h3><p>在坐标系中各处要配上一套同步时钟，给出质点运动到某地点的时刻。在质点的运动过程中，质点的位矢是时间$t$的函数，记作</p>
+<script type="math/tex; mode=display">
+\vec{r}=\vec{r}(t)</script><p>称为运动方程</p>
+<h3 id="平均速度和瞬时速度"><a href="#平均速度和瞬时速度" class="headerlink" title="平均速度和瞬时速度"></a>平均速度和瞬时速度</h3><script type="math/tex; mode=display">
+\bar{\vec{v}}=\frac{\Delta \vec{r}}{\Delta t}</script><p>平均速度只是反映了某个时间段运动的平均状况<br>平均速度不能反映各个时刻的运动，为了反映各个时刻的运动，需要引入瞬时速度</p>
+<script type="math/tex; mode=display">
+\vec{v}=\lim _{\Delta t \rightarrow 0} \frac{\Delta \vec{r}}{\Delta t}=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}</script><p>瞬时速度，简称速度<br>速度的大小称为速率</p>
+<h3 id="平均加速度和瞬时加速度"><a href="#平均加速度和瞬时加速度" class="headerlink" title="平均加速度和瞬时加速度"></a>平均加速度和瞬时加速度</h3><ul>
+<li>平均加速度<script type="math/tex; mode=display">
+\bar{\vec{a}}=\frac{\Delta \vec{v}}{\Delta t}=\frac{\vec{v}(t+\Delta t)-\vec{v}(t)}{\Delta t}</script></li>
+<li>加速度<script type="math/tex; mode=display">
+\vec{a}=\lim _{\Delta t \rightarrow 0} \frac{\Delta \vec{v}}{\Delta t}=\frac{\mathrm{d}\vec{v}}{\mathrm{d}t}=\frac{\mathrm{d}^2 \vec{r}}{\mathrm{d}t^2}</script></li>
+</ul>
+<h3 id="几何意义"><a href="#几何意义" class="headerlink" title="几何意义"></a>几何意义</h3><ul>
+<li><p>位移的几何意义：位移在数值上等于 $v-t$ 图上曲线与$t$轴围成的面积</p>
+<script type="math/tex; mode=display">
+x(t)-x_0=\int_0^t v \mathrm{d}t</script></li>
+<li><p>速度的几何意义：速度在数值上等于 $a-t$ 图上曲线与$t$轴围成的面积</p>
+<script type="math/tex; mode=display">
+v(t)-v_0=\int_0^t a \mathrm{d}t</script></li>
+</ul>
+<h3 id="坐标系下的位矢"><a href="#坐标系下的位矢" class="headerlink" title="坐标系下的位矢"></a>坐标系下的位矢</h3><ul>
+<li><p>三维直角坐标系</p>
+<script type="math/tex; mode=display">
+\vec{r}=\vec{r}_x+\vec{r}_y+\vec{r}_z=x\vec{i}+y\vec{j}+z\vec{k}=(\boldsymbol{x},\boldsymbol{y},\boldsymbol{z})</script><p>大小 $r=\sqrt{x^2+y^2+z^2}=\left|\vec{r}\right|$</p>
+</li>
+<li><p>二维极坐标系<br>对于极点$O$外的任意点$P$，位置矢量</p>
+<script type="math/tex; mode=display">
+\vec{r}=\overrightarrow{OP}=r\vec{e}_r</script><p>径向基矢 $\vec{e}_r$ 沿着 $OP$ 方向，横向基矢 $\vec{e}_\theta$ 与径向基矢垂直，沿着角度的正方向<br>任意矢量</p>
+<script type="math/tex; mode=display">
+\vec{A}=A_r \vec{e}_r + A_{\theta}\vec{e}_{\theta}</script><p>大小 $\left|\vec{A}\right|=\sqrt{A_r^2+A_\theta^2}$</p>
+</li>
+<li><p>极坐标系与直角坐标系中同一点基矢间的关系</p>
+<script type="math/tex; mode=display">
+\begin{array}[c]
+\vec{e}_r=\cos\theta \vec{i}+\sin\theta \vec{j} \\
+\vec{e}_\theta=-\sin\theta \vec{i}+\cos\theta \vec{j}
+\end{array}</script></li>
+</ul>
+<h3 id="运动方程-1"><a href="#运动方程-1" class="headerlink" title="运动方程"></a>运动方程</h3><script type="math/tex; mode=display">
+\vec{r}(t)=x(t)\vec{i}+y(t)\vec{j}+z(t)\vec{k}</script><p>称为运动方程</p>
+<h3 id="轨迹方程"><a href="#轨迹方程" class="headerlink" title="轨迹方程"></a>轨迹方程</h3><p>质点在空间运动所经过的路迹称为轨迹，相应的曲线方程称为轨迹方程。</p>
+<ul>
+<li>轨迹方程不显含时间。</li>
+<li>轨迹方程包含的信息量小于运动学方程。</li>
+</ul>
+<h3 id="位移矢量"><a href="#位移矢量" class="headerlink" title="位移矢量"></a>位移矢量</h3><p>经过时间间隔 $\Delta t$ 后，质点位置矢量发生变化，把由始点 $A$ 指向终点 $B$ 的有向线段 $\Delta \vec{r}$ 称为点 $A$ 到 $B$ 的位移矢量，简称位移，$\Delta \vec{r}=\vec{r}_B-\vec{r}_A$</p>
+<h3 id="路程"><a href="#路程" class="headerlink" title="路程"></a>路程</h3><ul>
+<li>定义：质点实际运动轨迹的长度</li>
+</ul>
+<p>在自然坐标系下，设 $t$ 时刻质点在位置 $P$ ，在 $P$ 点建立正交坐标系，其一根坐标轴沿轨迹切线方向，正方向为运动的前进方向，单位矢量为 $\vec{e}_t$，一根沿轨迹法线方向，正方向指向轨迹内凹的一侧，单位矢量为 $\vec{e}_n$</p>
+<h3 id="速度与路程"><a href="#速度与路程" class="headerlink" title="速度与路程"></a>速度与路程</h3><ul>
+<li>速度：$\vec{v}=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}=\left(\frac{\mathrm{d}s}{\mathrm{d}t}\right)\vec{e}_t=v\vec{e}_t$</li>
+<li>速率：$v=\frac{\mathrm{d}s}{\mathrm{d}t}=|\vec{v}|$</li>
+</ul>
+<h3 id="速度在平面极坐标系中的表达形式"><a href="#速度在平面极坐标系中的表达形式" class="headerlink" title="速度在平面极坐标系中的表达形式"></a>速度在平面极坐标系中的表达形式</h3><script type="math/tex; mode=display">
+\vec{v}=\frac{\mathrm{d} r}{\mathrm{d} t} \vec{e}_{r}+r \frac{\mathrm{d} \theta}{\mathrm{d} t} \vec{e}_{\theta}=v_{r} \vec{e}_{r}+v_{\theta} \vec{e}_{\theta}</script><h3 id="抛体运动"><a href="#抛体运动" class="headerlink" title="抛体运动"></a>抛体运动</h3><ul>
+<li><script type="math/tex; mode=display">
+\vec{a}_x=\frac{\mathrm{d}\vec{v}_x}{\mathrm{d}t}=\mathbf{0}</script></li>
+<li><script type="math/tex; mode=display">
+\vec{a}_y=\frac{\mathrm{d}\vec{v}_y}{\mathrm{d}t}=-\boldsymbol{g}</script></li>
+<li><script type="math/tex; mode=display">
+\vec{v}_{0x}=\vec{v}_0\cos\alpha</script></li>
+<li><script type="math/tex; mode=display">
+\vec{v}_{0y}=\vec{v}_0\sin\alpha</script></li>
+<li><script type="math/tex; mode=display">
+\vec{v}_{x}=\vec{v}_0\cos\alpha</script></li>
+<li><script type="math/tex; mode=display">
+\vec{v}_{y}=\vec{v}_0\sin\alpha-\boldsymbol{g}t</script></li>
+<li><script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+x=v_{0} t \cos \alpha \\
+y=v_{0} t \sin \alpha-\frac{1}{2} g t^{2}
+\end{array}\right.</script></li>
+<li><script type="math/tex; mode=display">
+y=x\tan\alpha-\frac{g}{2v_0^2\cos^2\alpha}x^2</script></li>
+</ul>
+<h3 id="圆周运动"><a href="#圆周运动" class="headerlink" title="圆周运动"></a>圆周运动</h3><p>质点的圆周运动，除了用位矢、位移、速度和加速度等所谓的线量来描述外，也常用角量来描述。 </p>
+<ul>
+<li>角位置$\theta$：质点所在的矢径与$x$轴的夹角</li>
+<li>运动方程：$\theta=\theta(t)$</li>
+<li>平均角速度：$\bar{\omega}=\frac{\Delta \theta}{\Delta t}$</li>
+<li>（瞬时）角速度：$\omega=\lim_{\Delta t \rightarrow 0} \frac{\Delta \theta}{\Delta t}=\frac{\mathrm{d} \theta}{\mathrm{d} t}$</li>
+<li>角速度为矢量，其方向满足右手定则：右手四指沿质点转动方向，大拇指指向角速度方向。</li>
+<li>平均角加速度：$\bar{\beta}=\frac{\Delta \omega}{\Delta t} $</li>
+<li>角加速度：$\beta=\lim_{\Delta \rightarrow 0} \frac{\Delta \omega}{\Delta t}=\frac{\mathrm{d} \omega}{\mathrm{d} t}=\frac{\mathrm{d}^{2} \theta}{\mathrm{d} t^{2}}$</li>
+</ul>
+<h3 id="匀角加速圆周运动的基本公式"><a href="#匀角加速圆周运动的基本公式" class="headerlink" title="匀角加速圆周运动的基本公式"></a>匀角加速圆周运动的基本公式</h3><ul>
+<li><script type="math/tex; mode=display">
+\omega=\omega_{0}+\beta t</script></li>
+<li><script type="math/tex; mode=display">
+\theta=\theta_{0}+\omega_{0} t+\frac{1}{2} \beta t^{2}</script></li>
+<li><script type="math/tex; mode=display">
+\omega^{2}=\omega_{0}^{2}+2 \beta\left(\theta-\theta_{0}\right)</script></li>
+</ul>
+<h3 id="圆周运动线量和角量的关系"><a href="#圆周运动线量和角量的关系" class="headerlink" title="圆周运动线量和角量的关系"></a>圆周运动线量和角量的关系</h3><ul>
+<li>路程与角位移之间的关系<script type="math/tex; mode=display">
+\Delta s=R\Delta\theta</script></li>
+<li>线速度与角速度的关系<script type="math/tex; mode=display">
+v=\frac{\mathrm{d}s}{\mathrm{d}t}=\omega R</script></li>
+</ul>
+<h3 id="自然坐标系中圆周运动的加速度"><a href="#自然坐标系中圆周运动的加速度" class="headerlink" title="自然坐标系中圆周运动的加速度"></a>自然坐标系中圆周运动的加速度</h3><ul>
+<li>法向坐标单位矢量 $\vec{e}_n$ 指向圆心</li>
+<li>切向坐标单位矢量 $\vec{e}_t$ 指向运动的前方</li>
+<li>加速度<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+a_{t}=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}^2 s}{\mathrm{d}t^2}=R \frac{\mathrm{d} \omega}{\mathrm{d} t}=R \beta \\
+a_{n}=v \omega=R \omega^{2}=\frac{v^{2}}{R}
+\end{array}\right.</script></li>
+</ul>
+<h3 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h3><ul>
+<li>若某一圆的曲率与轨道在该点的曲率相等，则此圆与轨道在该点相切，称之为该点的<strong>曲率圆</strong>。</li>
+<li>其圆心称为轨迹在该点的<strong>曲率中心</strong>。</li>
+<li>其半径称为轨迹在该点的<strong>曲率半径</strong>。</li>
+<li>质点做曲线运动时，可以看作各个瞬间做不同曲率半径的圆周运动。于是质点的曲线运动可以看作无穷多个各个瞬间做不同曲率半径的圆周运动的叠加。</li>
+<li>曲率半径$\rho=\frac{\mathrm{d} s}{\mathrm{d} \theta}$ </li>
+<li>曲率$k=\frac{\mathrm{d} \theta}{\mathrm{d} s}$</li>
+<li>加速度 $a=\vec{a}=\frac{\mathrm{d} v}{\mathrm{d} t} \vec{e}_{t}+v \frac{\mathrm{d} \theta}{\mathrm{d} t} \vec{e}_{n}=\frac{\mathrm{d} v}{\mathrm{d} t} \vec{e}_{t}+\frac{v^{2}}{\rho} \vec{e}_{n}$</li>
+<li>在二维直角坐标系中 $k=\frac{\left|\frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}}\right|}{\left[1+\left(\frac{\mathrm{d} y}{\mathrm{d} x}\right)^{2}\right]^{3 / 2}}$</li>
+<li>切向加速度分量 $a_{t}=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}^{2} s}{\mathrm{d} t^{2}}$</li>
+<li>法向加速度分量 $a_{n}=v \frac{\mathrm{d} \theta}{\mathrm{d} t}=\frac{1}{\rho} v^{2}$</li>
+<li>加速度大小 $a=|\vec{a}|=\sqrt{a_{t}^{2}+a_{n}^{2}}=\sqrt{\left(\frac{\mathrm{d} v}{\mathrm{d} t}\right)^{2}+\frac{v^{4}}{\rho^{2}}}$</li>
+<li>加速度方向 $\tan\alpha=\frac{a_n}{a_t}$</li>
+</ul>
+<h3 id="一个小技巧"><a href="#一个小技巧" class="headerlink" title="一个小技巧"></a>一个小技巧</h3><script type="math/tex; mode=display">
+a=\frac{\mathrm{d}v}{\mathrm{d}t}=\frac{\mathrm{d}v}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}t}=v\frac{\mathrm{d}v}{\mathrm{d}x}</script><h3 id="牛顿的绝对时空观"><a href="#牛顿的绝对时空观" class="headerlink" title="牛顿的绝对时空观"></a>牛顿的绝对时空观</h3><ul>
+<li>绝对时间：“绝对的、真正的和数学的时间自身在流逝着，而且由于其本性而在均匀地、与任何其他外界事物无关地流逝着”</li>
+<li>绝对空间：“绝对的空间，就其本性而言，是与外界任何事物无关而永远是相同的和不动的”</li>
+<li>绝对运动：“绝对运动是一个物体从某一绝对处所向另一绝对处所的移动”</li>
+<li>绝对静止：“真正的、绝对的静止，是指这一物体继续保持在不动的空间中的同一个部分而不动”</li>
+</ul>
+<h3 id="经典力学时空观的推论"><a href="#经典力学时空观的推论" class="headerlink" title="经典力学时空观的推论"></a>经典力学时空观的推论</h3><p>时间和空间的量度和参考系无关，长度和时间的测量是绝对的</p>
+<ul>
+<li>空间任意两点之间的距离对于任何的惯性系而言都是相等的，与惯性系的选择或观察者的相对运动无关。即：长度是“绝对的”，或称之为“绝对空间”</li>
+<li>时间也与惯性系的选择或观察者的相对运动无关，$t=t’$</li>
+<li>同时性的绝对性：在一惯性系中同时发生的两件事，在其它惯性系中也是同时发生的。</li>
+<li>时间间隔测量的绝对性：$\Delta t=\Delta t’$</li>
+<li>长度的绝对性：端点坐标值不随时间变化，坐标测量可在不同时刻进行，$l=x_2(t_2)-x_1(t_1)$</li>
+</ul>
+<h3 id="伽利略变换"><a href="#伽利略变换" class="headerlink" title="伽利略变换"></a>伽利略变换</h3><p>前提：两个惯性系 $S’,S$，$S’$ 相较于 $S$的速度为 $\vec{u}$</p>
+<ul>
+<li>位矢关系：$\vec{r}=\vec{r’}+\vec{u}$</li>
+<li>速度关系：$\vec{v}=\vec{v’}+\vec{u}$</li>
+<li>加速度关系：$\vec{a}=\vec{a’}$</li>
+</ul>
+<h3 id="一般的参照系变换"><a href="#一般的参照系变换" class="headerlink" title="一般的参照系变换"></a>一般的参照系变换</h3><p>设 $S$ 为惯性系，$S’$ 为相对于 $S$ 平动的非惯性系，$S’$ 相对于 $S$ 加速度为 $\vec{u_0}$，加速度为 $\vec{a_0}$</p>
+<ul>
+<li>位矢关系：$\vec{r}=\vec{r’}+\vec{r_0}$</li>
+<li>速度关系：$\vec{v}=\vec{v’}+\vec{u_0}$</li>
+<li>加速度关系：$\vec{a}=\vec{a’}+\vec{a_0}$</li>
+</ul>
+<h3 id="牛顿第一定律"><a href="#牛顿第一定律" class="headerlink" title="牛顿第一定律"></a>牛顿第一定律</h3><p>　　牛顿第一定律可表述如下：任何物体，如果没有受到其他物体的作用，都将保持静止或做匀速直线运动的状态。<br>　　牛顿第一定律的意义：</p>
+<ul>
+<li>定义了物体惯性的概念。任何物体都有保持运动状态不变并且反抗其他物体改变其运动状态的属性，物体这种固有的属性通常称为物体的惯性。因此，牛顿第一定律又称为惯性定律。</li>
+<li>定义了力的概念。力是改变物体运动状态的原因，或者说是使物体产生加速度的原因。</li>
+<li>定义了惯性参考系与非惯性参考系的概念。物体运动遵从牛顿第一定律的参考系称为惯性参考系；反之，物体运动不遵从牛顿第一定律的参考系称为非惯性参考系。</li>
+</ul>
+<h3 id="牛顿第二定律"><a href="#牛顿第二定律" class="headerlink" title="牛顿第二定律"></a>牛顿第二定律</h3><ul>
+<li>惯性质量<br>惯性质量 $m$ 是用来衡量物体惯性大小的物理量。</li>
+<li>牛顿第二定律：<br>在惯性参考系，物体受到外力作用时，所获得的加速度的大小与合外力成正比，与物体的惯性质量成反比，加速度的方向与合外力的方向相同。<script type="math/tex; mode=display">
+\begin{array}{c}
+\sum_{i} \boldsymbol{F}_{i}=m \boldsymbol{a} \\
+\sum_{i} \boldsymbol{F}_{i}=m \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t} \\
+\boldsymbol{F}=\frac{\mathrm{d} \boldsymbol{p}}{\mathrm{d} t}
+\end{array}</script></li>
+<li><p>意义：</p>
+<ul>
+<li>给出了力的测量定义：<br>选定一个物体，测量各种力引起的加速度</li>
+<li>物体惯性(质量)的测量定义：<br>选定一个力，测量它对各种物体引起的加速度</li>
+</ul>
+</li>
+<li><p>两个特性</p>
+<ul>
+<li>牛顿第二定律的瞬时性。牛顿第二定律定量地表述了物体的加速度与所受外力之间的瞬时关系。加速度与外力同时存在，同时改变，同时消失。一旦作用在物体上的外力撤去，物体的加速度立即消失，这正是第一定律所要求的，也是物体惯性的表现。</li>
+<li>牛顿第二定律的矢量性。力和物体的加速度都是矢量，$\boldsymbol{F}=m\boldsymbol{a}$ 是矢量方程。</li>
+</ul>
+</li>
+<li><p>注意</p>
+<ul>
+<li>牛顿第二定律仅适用于质点。对于广延物体，可以把它分解为无穷多个无穷小的质点，对每一个质点应用牛顿第二定律。</li>
+<li>牛顿第二定律只适用于惯性参考系。</li>
+</ul>
+</li>
+</ul>
+<h3 id="牛顿第三定律"><a href="#牛顿第三定律" class="headerlink" title="牛顿第三定律"></a>牛顿第三定律</h3><p>牛顿第三定律又称为作用和反作用定律。可表述如下:当物体1以力 $f_{21}$ 作用于物体2时，物体2必定同时以大小相等、方向相反的同性质的力 $f_{12}$ ，沿同一直线作用于物体1上。</p>
+<ul>
+<li>作用力总是成对出现，大小相等、方向相反；</li>
+<li>力的作用具有瞬时性：“同时存在，同时消失”。</li>
+<li>作用在两个不同的物体上，不能相互抵消；（作用力和反作用力不是一对平衡力！）</li>
+<li>作用性质相同，是同一性质的力，但作用效果不同。</li>
+</ul>
+<h3 id="牛顿运动定律的适用范围"><a href="#牛顿运动定律的适用范围" class="headerlink" title="牛顿运动定律的适用范围"></a>牛顿运动定律的适用范围</h3><ul>
+<li>牛顿运动定律仅适用于惯性系</li>
+<li>牛顿运动定律仅适用于速度比光速低得多的物体</li>
+<li>牛顿运动定律仅适用于宏观系统和介观系统的力学性质研究</li>
+<li>牛顿运动定律仅适用于实物间的相互作用问题，不适用于通过场所传递的相互作用。</li>
+</ul>
+<h3 id="经典力学相对性原理"><a href="#经典力学相对性原理" class="headerlink" title="经典力学相对性原理"></a>经典力学相对性原理</h3><ul>
+<li>任何相对于惯性系做匀速直线运动的参考系都是惯性参考系。</li>
+<li>在不同惯性参考系中观测同一质点的运动时，除了质点的位置、速度可能不同外，其加速度是相同的，质点的运动都遵从牛顿运动定律。</li>
+<li>力学运动定律在所有惯性系中均成立且具有相同的形式，即一切惯性系在力学意义上是等价的、平权的。</li>
+<li>不可能通过惯性系内进行的任何形式的力学实验来确定该惯性系相对其他惯性系的速度。这就是经典力学相对性原理。</li>
+</ul>
+<h3 id="万有引力"><a href="#万有引力" class="headerlink" title="万有引力"></a>万有引力</h3><p>任何两个物体之间都存在相互吸引力，即万有引力。质量分别为 $m$ 和 $M$ 的两个质点，相距为 $r$ 时，它们之间的引力大小为</p>
+<script type="math/tex; mode=display">
+F=G\frac{Mn}{r^2}</script><p>上式也可以表示为矢量形式</p>
+<script type="math/tex; mode=display">
+\boldsymbol{F}=G\frac{Mn}{r^3}\boldsymbol{r}</script><p>其中 $\boldsymbol{F}$ 表示物体 $M$ 对物体 $m$ 的引力；$r$ 表示 $m$ 相对于 $M$ 的位矢；$G$ 为万有引力常量。这里的质量是物体间引力作用的量度，称为引力质量，它与牛顿运动定律中衡量物体惯性大小的惯性质量在物理意义上是完全不同的。</p>
+<h3 id="惯性质量和引力质量的统一"><a href="#惯性质量和引力质量的统一" class="headerlink" title="惯性质量和引力质量的统一"></a>惯性质量和引力质量的统一</h3><p>按万有引力定律及牛顿运动定律，有</p>
+<script type="math/tex; mode=display">
+G\frac{m_\mathrm{A} M}{R^2}=m_1 g_0</script><p>即</p>
+<script type="math/tex; mode=display">
+\frac{m_1}{m_\mathrm{A}}=\frac{GM}{g_0 R^2}</script><p>实验证明，惯性质量和引力质量之比对一切物体都相同，对任何物体有 $m_\mathrm{A}=m_1$。引力质量和惯性质量统称为质量。</p>
+<h3 id="开普勒三定律"><a href="#开普勒三定律" class="headerlink" title="开普勒三定律"></a>开普勒三定律</h3><ul>
+<li>开普勒第一定律：所有行星绕太阳运动的轨道都是椭圆，太阳位于椭圆轨道的一个焦点上。</li>
+<li>开普勒第二定律：对任意一个行星来说，它与太阳的连线在相等的时间内扫过相等的面积。</li>
+<li>开普勒第三定律：所有行星的轨道半长轴的三次方跟它的公转周期的二次方的比值。</li>
+</ul>
+<h3 id="重力"><a href="#重力" class="headerlink" title="重力"></a>重力</h3><p>物体所受地球的引力 $\boldsymbol{F}_e$ （指向地心）有一部分提供了向心力，剩余的分力 $\boldsymbol{F}_c$ 称为重力，即</p>
+<script type="math/tex; mode=display">
+\boldsymbol{P}=\boldsymbol{F}_e-\boldsymbol{F}_c</script><p>设物体处于纬度 $\varphi$，地球半径为 $R$，质量为 $M$，自转角速度大小为 $\omega$，则重力大小</p>
+<script type="math/tex; mode=display">
+\begin{align}
+P \approx & F_{\mathrm{e}}-F_{\mathrm{c}} \cos \varphi\\
+= & m\left(G \frac{M}{R^{2}}-R \omega^{2} \cos ^{2} \varphi\right)\\
+= & m g_{0}\left(1-\frac{R \omega^{2}}{g_{0}} \cos ^{2} \varphi\right)\\
+\approx & mg_0(1-0.0035\cos^2\varphi)
+\end{align}</script><h3 id="弹力"><a href="#弹力" class="headerlink" title="弹力"></a>弹力</h3><ul>
+<li>弹性形变：物体受力发生形变，当把力撤除后，物体若完全恢复到原来的形状，这种形变称为弹性形变。</li>
+<li>弹性力：有物体形变引起的相互作用力。弹性力是一种接触力，其方向垂直于两物体接触点的切面。</li>
+</ul>
+<p>对于理想的弹簧，在弹性限度内，弹力遵从胡克定律</p>
+<script type="math/tex; mode=display">
+\boldsymbol{F}=-kx\boldsymbol{i}</script><h3 id="摩擦力"><a href="#摩擦力" class="headerlink" title="摩擦力"></a>摩擦力</h3><ul>
+<li>静摩擦力：当物体有滑动趋势但未滑动时作用在物体上的阻止物体相对运动的力。静摩擦力的大小取决于外力。（注意：静摩擦力不正比于支持力）</li>
+<li>最大静摩擦力：当静摩擦力增大到一定数值后就不能再增大了，这时的静摩擦力称为最大静摩擦力。实验表明，最大静摩擦力 $f_\mathrm{s}$ 与两个物体间的正压力 $N$ 成正比，即<script type="math/tex; mode=display">
+f_\mathrm{s}=\mu_\mathrm{s} N</script></li>
+<li>静摩擦因数：上式中 $\mu_\mathrm{s}$ 称为静摩擦因数，与两相互接触物体的材质、接触面的粗糙程度和干湿程度等因素有关。</li>
+<li>滑动摩擦力：当外力超过最大静摩擦力时，物体间将产生相对运动，在这两物体的接触面上就会产生阻碍物体作相对滑动的力，这种力是滑动摩擦力。实验表明，滑动摩擦力 $f_\mathrm{k}$ 也与正压力 $N$ 成正比，即<script type="math/tex; mode=display">
+f_\mathrm{k}=\mu N</script></li>
+<li>滑动摩擦因数：上式中 $\mu$ 称为滑动摩擦因数，它不仅与两相互接触物体的材料及表面情况有关，而且还与物体的相对速度有关。在大多数情况下，它先随相对速度的增加而减小，之后又随相对速度的增大而增大。在通常的速率范围内，可认为 $\mu$ 与速率无关。</li>
+<li>两个因数的关系：对于给定的一对接触面而言， $\mu_\mathrm{s}&gt;\mu$</li>
+<li>一般情况下，$\mu_\mathrm{s}$ 和 $\mu$ 均小于 $1$。在一般问题的简要分析中，可以把 $\mu_\mathrm{s}$ 和 $\mu$ 看成常量，且不加以区分。</li>
+</ul>
+<h3 id="流体阻力"><a href="#流体阻力" class="headerlink" title="流体阻力"></a>流体阻力</h3><p>一个物体在流体（液体或气体）中和流体有相对运动时会受到流体的阻力。阻力的方向与物体相对于流体的速度方向相反，其大小与相对速度的大小有关。<br>物体运动速度小时：</p>
+<script type="math/tex; mode=display">
+\boldsymbol{f}=-b_1\boldsymbol{v}</script><p>其中 $b_1$ 与流体及物体的性质有关。<br>物体运动速度大时：</p>
+<script type="math/tex; mode=display">
+\boldsymbol{f}=b_1\boldsymbol{v}+b_2\boldsymbol{v}^2+b_3\boldsymbol{v}^3+\cdots</script><p>物体在流体中下落时，受到的阻力随速率增大而增大，当阻力和重力平衡时，物体以匀速下落。物体在流体中下落的最大速率称为终极速率，又称为<strong>收尾速率</strong>。</p>
+<h3 id="牛顿运动定律的应用"><a href="#牛顿运动定律的应用" class="headerlink" title="牛顿运动定律的应用"></a>牛顿运动定律的应用</h3><p>利用牛顿运动定律解决问题的主要步骤：</p>
+<ul>
+<li>分析各个物体受力情况，画隔离体图。</li>
+<li>分析各个物体的运动状态，寻求可能的约束条件。</li>
+<li>选择适当的坐标系，列出相应的动力学方程。</li>
+<li>解方程，并对结果进行分析和讨论。</li>
+</ul>
+<h3 id="非惯性系"><a href="#非惯性系" class="headerlink" title="非惯性系"></a>非惯性系</h3><p>牛顿运动定律成立的参照系叫做惯性参照系。牛顿定律不能成立的参照系是非惯性系。<br>实际上，没有严格意义上的惯性系存在，惯性系只是参考系的一个理想物理模型。</p>
+<h3 id="平动加速系"><a href="#平动加速系" class="headerlink" title="平动加速系"></a>平动加速系</h3><p>设 $S$ 为惯性系，$S’$ 相对于 $S$ 加速度为 $\vec{\boldsymbol{a}_0}$，则 $S’$ 为相对于 $S$ 平动的非惯性系。<br>把</p>
+<script type="math/tex; mode=display">
+\vec{\boldsymbol{F}_i}=-m\vec{\boldsymbol{a}_0}</script><p>称为惯性力</p>
+<ul>
+<li>惯性力没有施力者，也不存在反作用力</li>
+<li>惯性力是一个虚拟力，和真实力有区别</li>
+<li>真实力在惯性系和非惯性系中存在；惯性力仅在于非惯性系中存在</li>
+<li>惯性力的实质是物体的惯性在非惯性系中的表现</li>
+</ul>
+<h3 id="匀速转动参考系"><a href="#匀速转动参考系" class="headerlink" title="匀速转动参考系"></a>匀速转动参考系</h3><script type="math/tex; mode=display">
+\vec{\boldsymbol{F}_i}=-mR\omega^2 \vec{\boldsymbol{e}_r}</script><p>称为惯性离心力</p>
+<ul>
+<li>例：水桶旋转时水面方程为<script type="math/tex; mode=display">
+y=y_0+\frac{\omega^2}{2g}x^2</script></li>
+</ul>
+<h3 id="角速度的矢量表示"><a href="#角速度的矢量表示" class="headerlink" title="角速度的矢量表示"></a>角速度的矢量表示</h3><p>角速度是矢量，其大小反映物体转动的快慢，其方向沿转轴，指向由<strong>右手定则</strong>确定，即以弯曲的四指代表旋转方向，翘起的拇指指向角速度矢量 $\boldsymbol{\omega}$ 的方向。<br><img src="https://s2.loli.net/2022/03/04/ixvL2WIoPtgdbMK.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h3 id="科里奥利力"><a href="#科里奥利力" class="headerlink" title="科里奥利力"></a>科里奥利力</h3><p>在匀角速转动参考系中的惯性力为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{F}_{\mathrm{i}}=m r \omega^{2} \boldsymbol{e}_{r}+2 m \boldsymbol{v}^{\prime} \times \boldsymbol{\omega}</script><p>式中 $\boldsymbol{v}^{\prime}$ 是物体相对于匀角速转动参考系的速度，第一项就是前述的惯性离心力，第二项称为科里奥利力，它的方向总是与物体相对转动参考系运动的方向垂直。</p>
+<script type="math/tex; mode=display">
+\boldsymbol{f}_c = 2 m \boldsymbol{v}^{\prime} \times \boldsymbol{\omega}</script><ul>
+<li>科里奥利力的影响<ul>
+<li>北半球龙卷风向右偏</li>
+<li>轨道磨损</li>
+<li>北半球河床的右岸受到的冲刷较厉害</li>
+<li>两半球水涡方向相反</li>
+<li>使流动的大气形成气旋</li>
+<li>落体偏东</li>
+</ul>
+</li>
+</ul>
+<h3 id="质心"><a href="#质心" class="headerlink" title="质心"></a>质心</h3><p>考虑 $N$ 个质点组成的系统，定义</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\boldsymbol{r}_{C} &=\frac{\sum_{i=1}^{N} m_{i} \boldsymbol{r}_{i}}{m} \\
+&=\frac{m_{1} \boldsymbol{r}_{1}+m_{2} \boldsymbol{r}_{2}+\cdots+m_{N} \boldsymbol{r}_{N}}{m_{1}+m_{2}+\cdots+m_{N}}
+\end{aligned}</script><p>为系统的<strong>质心</strong>。质心指质点系的质量集中于此的一个假想点，质心的位置矢量是质点系中各个质点的位置矢量根据其对应质量加权平均之后的矢量。</p>
+<p>如果系统的质量是连续分布的，$\boldsymbol{r}_{C}$ 有积分形式</p>
+<script type="math/tex; mode=display">
+\boldsymbol{r}_{C}=\frac{\int \boldsymbol{r} \mathrm{d} m}{\int \mathrm{d} m}</script><p>其中 $\boldsymbol{r}$ 为质量元 $\mathrm{d} m$ 的位置矢量。在直角坐标系中，还可以表示成如下分量形式：</p>
+<script type="math/tex; mode=display">
+x_{C}=\frac{\int x \mathrm{~d} m}{\int \mathrm{d} m}, y_{C}=\frac{\int y \mathrm{~d} m}{\int \mathrm{d} m}, z_{C}=\frac{\int z \mathrm{~d} m}{\int \mathrm{d} m}</script><p>根据质量分布情况，质量元又可表示为具体的形式</p>
+<ul>
+<li>若为线分布时, $\mathrm{d} m=\rho_{l} \mathrm{~d} l $</li>
+<li>若为面分布时, $\mathrm{d} m=\rho_{s} \mathrm{~d} s $</li>
+<li>若为体分布时, $\mathrm{d} m=\rho \mathrm{d} V $<br>这里 $\rho_{l},\rho_{s},\rho$ 分别为质量线密度、质量面密度和质量体密度。</li>
+<li>具有几何对称中心的匀质物体，其质心一般在几何对称中心</li>
+<li>半径为 $R$、顶角为 $2\alpha$ 的匀质扇形板的质心位置为<script type="math/tex; mode=display">
+x_c=\frac{2}{3} R \frac{\sin \alpha}{\alpha}</script></li>
+<li>质心满足叠加原理，具有叠加性<script type="math/tex; mode=display">
+\boldsymbol{r}_{C}=\frac{\sum m_i\boldsymbol{r}_{C_i}}{\sum m_i}</script></li>
+</ul>
+<h3 id="质心运动定理"><a href="#质心运动定理" class="headerlink" title="质心运动定理"></a>质心运动定理</h3><p>质心加速度：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\boldsymbol{a}_{c}&=\frac{\mathrm{d} \boldsymbol{v}_{c}}{\mathrm{d} t}\\
+&=\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{1}{M} \sum m_{i} \boldsymbol{v}_{i}\right) \\
+&=\frac{1}{M} \sum m_{i} \frac{\mathrm{d} \boldsymbol{v}_{i}}{\mathrm{d} t}
+\end{aligned}</script><ul>
+<li><p>质心运动定理：在惯性参考系中，质心的运动等同于一个质点的运动；该质点的质量等于质点系的总质量，作用在该质点上的力等于质点系所受到的合外力。该质点的运动遵守牛顿第二定律，作用在该质点上的力等于它的质量乘以它的加速度。</p>
+<script type="math/tex; mode=display">
+\boldsymbol{F}=M\boldsymbol{a}_c</script><ul>
+<li>质点系运动时，其质心的加速度完全决定于质点系所受的外力。而与质点系的内力无关。</li>
+</ul>
+</li>
+<li><p>质点系质心守恒定理：若作用于质点系的所有外力的矢量和恒等于零，即 $\boldsymbol{a}_c=0$，于是有 $\boldsymbol{v}_c$是常量，即质心作匀速直线运动；如果质心原来是静止的，则它将在原处保持不动。</p>
+<ul>
+<li>由此可见，要改变质点系质心的运动，必须有外力作用；质点系内部各质点之间相互作用的内力不能改变质心的运动。 </li>
+</ul>
+</li>
+<li><p>质心沿某一轴的运动守恒定理：如果质点系所有外力的合力在某一方向上的分量为零，例如在 $x$ 轴上，即 $\sum \boldsymbol{F}_{ix}=0$，则有 $\boldsymbol{v}_{Cx}$ 为常量，即质心的速度在 $x$ 轴上的分量保持为常量；如果质心的速度在该轴上的分量原来就等于零，则质心在该轴上的坐标保持不变。</p>
+</li>
+</ul>
+<h2 id="第二章-功与能"><a href="#第二章-功与能" class="headerlink" title="第二章 功与能"></a>第二章 功与能</h2><h3 id="功的定义"><a href="#功的定义" class="headerlink" title="功的定义"></a>功的定义</h3><h4 id="恒力做功"><a href="#恒力做功" class="headerlink" title="恒力做功"></a>恒力做功</h4><script type="math/tex; mode=display">
+A=F|\Delta \boldsymbol{r}| \cos \theta=\boldsymbol{F} \cdot \Delta \boldsymbol{r}</script><ul>
+<li>在质点做曲线运动的情况下，这种定义依然有效</li>
+</ul>
+<h4 id="变力做功"><a href="#变力做功" class="headerlink" title="变力做功"></a>变力做功</h4><script type="math/tex; mode=display">
+A=\lim _{N \rightarrow \infty} \sum_{i=1}^{N} \Delta A_{i}=\int_{a}^{b} \boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}</script><ul>
+<li>由于功是力与位移的标积沿曲线路径的积分，故通常功既与质点运动的始末位置有关，又与运动过程有关，是一个过程量</li>
+<li>功是标量，其正负取决于力与位移间的夹角 $\theta$ 。当 $0 \leqslant \theta&lt;\frac{\pi}{2}$ 时，$\mathrm{d} A&gt;0$，力对物体做正功。当 $\theta=\frac{\pi}{2}$ 时，$\mathrm{d} A=0$，力对物体不做功。当 $\frac{\pi}{2}&lt;\theta \leqslant \pi$ 时，$\mathrm{d} A&lt;0$, 力对物体做负功。</li>
+<li>功与参考系的选择有关</li>
+<li>当质点同时受到 $n$ 个力作用时，其合力的功等于各分力功的代数和，即<script type="math/tex; mode=display">
+\mathrm{d} A=\boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}=F_{x} \mathrm{~d} x+F_{y} \mathrm{~d} y+F_{z} \mathrm{~d} z</script></li>
+<li>在直角坐标系内，对任意的力有<script type="math/tex; mode=display">
+\begin{array}{c}
+\mathrm{d} A=\boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}=F_{x} \mathrm{~d} x+F_{y} \mathrm{~d} y+F_{z} \mathrm{~d} z \\
+A=\int_{x_{a}}^{x_{b}} F_{x} \mathrm{~d} x+\int_{y_{a}}^{y_{b}} F_{y} \mathrm{~d} y+\int_{z_{a}}^{z_{b}} F_{z} \mathrm{~d} z
+\end{array}</script></li>
+<li>平均功率和瞬时功率的定义：略</li>
+</ul>
+<h4 id="内力做功"><a href="#内力做功" class="headerlink" title="内力做功"></a>内力做功</h4><p>系统内力作用总是发生在两两质点之间的，$\boldsymbol{f}_{12}=-\boldsymbol{f}_{21}$</p>
+<script type="math/tex; mode=display">
+\mathrm{d} A_{\text {对 }} =\boldsymbol{f}_{21} \cdot \mathrm{d} \boldsymbol{r}_{21}</script><p>其中 $\boldsymbol{r}_{21}=\boldsymbol{r}_{2}-\boldsymbol{r}_{1}$ 为质点2相对于质点1的相对位置矢量</p>
+<ul>
+<li>一对内力做功之和与所选参考系无关。</li>
+<li>一般情况下，一对内力所作的功不为零。</li>
+<li>在无相对位移(如刚体)或相对位移与一对内力垂直的情况下，一对内力做功之和等于零。</li>
+</ul>
+<h3 id="计算功的基本步骤"><a href="#计算功的基本步骤" class="headerlink" title="计算功的基本步骤"></a>计算功的基本步骤</h3><p>功的计算，关键在把握对元功的分析：不论力是在变还是位移的方向在变，我们都可只抓住运动过程中的一段元位移，在此元过程中可以将力和元位移都视为不变的，从而写出元功的表达式，此称微元法。 </p>
+<ol>
+<li>建立适当坐标系；</li>
+<li>在过程区间任选一元位移；</li>
+<li>写出元功，分析变量关系；</li>
+<li>积分计算功；</li>
+<li>分析结果的物理意义。</li>
+</ol>
+<h3 id="动能定理"><a href="#动能定理" class="headerlink" title="动能定理"></a>动能定理</h3><p>质量为 $m$ 的质点以速率 $v$ 运动时，其动能定义为</p>
+<script type="math/tex; mode=display">
+E_\mathrm{k}=\frac{1}{2}mv^2</script><p>动能是标量，且与坐标系的选取有关。</p>
+<p>动能定理：在物体运动过程中，合外力对质点做的功等于质点动能的增量</p>
+<script type="math/tex; mode=display">
+A=E_{\mathrm{k}b}-E_{\mathrm{k}a}</script><ul>
+<li>动能是描写物体状态的物理量，物体状态的改变是靠作功实现的。动能定理的实质，说明了力的空间积累效果是改变了物体的动能。</li>
+<li>功是过程量，动能是状态量，动能定理建立起过程量功与状态量动能之间的关系</li>
+<li>由于总能量是守恒的，动能定理表明，通过做功可以实现能量的转换，即功是能量转换的一种量度。</li>
+<li>动能是用来衡量物体做功本领的物理量，通过做功，质点与外界进行能量交换。</li>
+<li>当 $A&gt;0$ 时，作用于质点上的合外力做正功，其结果是使质点的动能增加；当 $A&lt;0$ 时，作用于质点上的合外力做负功，其结果是使质点的动能减小，或称质点可以通过减小动能而对外做功。</li>
+<li>动能定理只在惯性系中成立，动能定理的<strong>形式</strong>与惯性系的选择<strong>无关</strong>，功和动能的<strong>大小</strong>都与参考系的选择<strong>有关</strong>。</li>
+<li>应用动能定理解题时，只关心物体始末动能之差，无须研究物体在每一时刻的运动情况。</li>
+<li>动能定理的微分形式：<script type="math/tex; mode=display">
+\boldsymbol{F} \cdot \boldsymbol{v}=\frac{\mathrm{d} E_{\mathrm{k}}}{\mathrm{d} t}</script></li>
+</ul>
+<h3 id="动能定理的解题步骤"><a href="#动能定理的解题步骤" class="headerlink" title="动能定理的解题步骤"></a>动能定理的解题步骤</h3><ol>
+<li>确定研究对象。</li>
+<li>受力分析。</li>
+<li>选定研究过程。在<strong>惯性参照系</strong>确定过程的始、末状态的动能。</li>
+<li>计算在该过程中，各力的做功情况。</li>
+<li>列动能定理方程。</li>
+<li>求解、讨论。</li>
+</ol>
+<h3 id="保守力与非保守力做功"><a href="#保守力与非保守力做功" class="headerlink" title="保守力与非保守力做功"></a>保守力与非保守力做功</h3><ul>
+<li>保守力：功是一个过程量，一般而言，力对物体做功的大小除了与物体的始末位置有关外，还与物体具体运动路径有关。但是，自然界也存在一类力，其做功与路径无关，这类力称为保守力。保守力做功只与质点的初、末位置有关。保守力沿任意闭合路径所作的功为零。</li>
+<li>非保守力：凡做功与路径有关的力称为非保守力。非保守力包括耗散力和非耗散力两类。</li>
+<li>耗散力：耗散力是指对系统或物体作负功，而使之总机械能减少的力。如摩擦力。</li>
+<li>非耗散力：非耗散力指能对系统或物体作正功，而且作功与路径有关的力。如磁力。</li>
+<li>有心力：有心力的方向永远指向一个固定点；称此点为力中心点。万有引力、静电力，都是有心力。</li>
+<li>回旋力：若质点在空间各处受到的力都沿着一系列同心圆弧的切向，这种力被称为回旋力。例如电子在感应加速器中受到的电场力、流体旋涡中质点受到流体的冲击力等就属于这种力。</li>
+</ul>
+<h4 id="重力（保守力）"><a href="#重力（保守力）" class="headerlink" title="重力（保守力）"></a>重力（保守力）</h4><script type="math/tex; mode=display">
+A=\int_{a}^{b} m \boldsymbol{g} \cdot \mathrm{d} \boldsymbol{r}=-m g \int_{z_{1}}^{z_{2}} \mathrm{~d} z=m g z_{1}-m g z_{2}</script><h4 id="万有引力（保守力）"><a href="#万有引力（保守力）" class="headerlink" title="万有引力（保守力）"></a>万有引力（保守力）</h4><script type="math/tex; mode=display">
+A=-G m_{1} m_{2} \int_{r_{a}}^{r_{b}} \frac{\mathrm{d} r}{r^{2}}=G m_{1} m_{2}\left(\frac{1}{r_{b}}-\frac{1}{r_{a}}\right)</script><h4 id="弹性力（保守力）"><a href="#弹性力（保守力）" class="headerlink" title="弹性力（保守力）"></a>弹性力（保守力）</h4><script type="math/tex; mode=display">
+A_{a b}=\frac{1}{2} k x_{1}^{2}-\frac{1}{2} k x_{2}^{2}</script><h4 id="回旋力（非保守力）"><a href="#回旋力（非保守力）" class="headerlink" title="回旋力（非保守力）"></a>回旋力（非保守力）</h4><script type="math/tex; mode=display">
+A=\int_{a}^{b} \boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}=\int_{a}^{b} \beta r \boldsymbol{e}_{\theta} \cdot \mathrm{d} \boldsymbol{r}</script><h4 id="摩擦力（非保守力）"><a href="#摩擦力（非保守力）" class="headerlink" title="摩擦力（非保守力）"></a>摩擦力（非保守力）</h4><script type="math/tex; mode=display">
+\begin{aligned}
+A &=\int_{a}^{b} \boldsymbol{f} \cdot \mathrm{d} \boldsymbol{r}=\int_{a}^{b}-\mu m g \boldsymbol{e}_{\mathrm{t}} \cdot \mathrm{d} \boldsymbol{r}=\int_{a}^{b}-\mu m g \mathrm{~d} s \\
+&=-\mu m g \int_{a}^{b} \mathrm{~d} s=-\mu m g s_{a b}
+\end{aligned}</script><h3 id="势能"><a href="#势能" class="headerlink" title="势能"></a>势能</h3><p>在保守力场中，质点在始、末两个不同的位置上具有不同的能量，也就是说，保守力场中的物体储藏着一种能量，这种能量是质点位置的单值函数，也叫势能函数。我们将这种与位置有关的能量称为势能（或称位能），函数用 $E_\mathrm{p}(\boldsymbol{r})$ 表示。</p>
+<p>规定当质点从点a运动到点b保守力做的功等于势能的减少，即</p>
+<script type="math/tex; mode=display">
+A_{a b}=\int_{a}^{b} \boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}=E_{\mathrm{p} a}-E_{\mathrm{p} b}</script><p>用势能的增量 $\Delta E_{\mathrm{p}}=E_{\mathrm{p} b}-E_{\mathrm{p} a}$ 表示，则有</p>
+<script type="math/tex; mode=display">
+\Delta E_{\mathrm{p}}=E_{\mathrm{p} b}-E_{\mathrm{p} a}=-\int_{a}^{b} \boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}</script><p>其含义为势能的增量等于保守力所做的负功。</p>
+<ul>
+<li>重力势能差<script type="math/tex; mode=display">
+E_{\mathrm{p} b}-E_{\mathrm{p} a}=m g z_{b}-m g z_{a}</script></li>
+<li>引力势能差<script type="math/tex; mode=display">
+E_{\mathrm{p} b}-E_{\mathrm{p} a}=\left(-G \frac{m_{1} m_{2}}{r_{b}}\right)-\left(-G \frac{m_{1} m_{2}}{r_{a}}\right)</script></li>
+<li><p>弹性势能差</p>
+<script type="math/tex; mode=display">
+E_{\mathrm{p} b}-E_{\mathrm{p} a}=\frac{1}{2} k x_{b}^{2}-\frac{1}{2} k x_{a}^{2}</script></li>
+<li><p>势能的计算</p>
+<script type="math/tex; mode=display">
+\boldsymbol{F} \cdot \mathrm{d} \boldsymbol{r}=-\mathrm{d} E_{\mathrm{p}}(\boldsymbol{r})</script></li>
+<li>势能零点的选择<br>对于重力势能，通常选取某一参考平面（$z=0$）为势能零点。</li>
+</ul>
+<h4 id="广延物体的重力势能"><a href="#广延物体的重力势能" class="headerlink" title="广延物体的重力势能"></a>广延物体的重力势能</h4><p>一个广延物体的重力势能等于一个质量集中于其质心的质点的重力势能，即等于其质量乘以重力加速度再乘以其质心的高度。</p>
+<script type="math/tex; mode=display">
+E_{\mathrm{p}}=mgz</script><h4 id="由保守力确定势能函数"><a href="#由保守力确定势能函数" class="headerlink" title="由保守力确定势能函数"></a>由保守力确定势能函数</h4><h4 id="由势能函数确定保守力"><a href="#由势能函数确定保守力" class="headerlink" title="由势能函数确定保守力"></a>由势能函数确定保守力</h4><h4 id="势能曲线"><a href="#势能曲线" class="headerlink" title="势能曲线"></a>势能曲线</h4>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">大学学习生活</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/%E7%89%A9%E7%90%86/">物理</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%A9%E7%90%86/">物理</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/02/18/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA%E7%AC%94%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">电路理论笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/12/13/%E9%AB%98%E6%95%B0%E4%B8%8A%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">
+                        <span class="hidden-mobile">高数上笔记整理（已完结）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'sjtu-szy/blog-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

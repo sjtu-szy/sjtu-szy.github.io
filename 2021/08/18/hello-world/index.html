@@ -53,6 +53,10 @@
 
 <!-- 自定义样式保持在最底部 -->
 
+  
+<link rel="stylesheet" href="/css/myiconfont.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -265,9 +269,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/18/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+                      <a href="/2021/08/19/%E5%BD%93%E5%B0%8F%E7%90%83%E9%81%87%E4%B8%8A%E7%9B%92%E5%AD%90/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">高中数学笔记(持续更新中……)</span>
+                        <span class="hidden-mobile">【SZY原创课程】当小球遇上盒子</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -287,20 +291,29 @@
                   
                 
                 
-  <div id="SOHUCS" sid='https://sjtu-szy.github.io/2021/08/18/hello-world/'></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      var appid = 'cyvDEHr2F';
-      var conf = '9b18c961fbe425448b8d1aaeff95d251';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
       } else {
-        Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-          window.changyan.api.config({"appid":"cyvDEHr2F","appkey":"9b18c961fbe425448b8d1aaeff95d251"})
-        });
+        schema = light;
       }
-    });
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'sjtu-szy/blog-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

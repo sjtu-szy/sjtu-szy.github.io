@@ -53,6 +53,10 @@
 
 <!-- 自定义样式保持在最底部 -->
 
+  
+<link rel="stylesheet" href="/css/myiconfont.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -277,9 +281,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/17/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">
+                      <a href="/2021/10/24/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">高数笔记整理</span>
+                        <span class="hidden-mobile">大学化学笔记</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -305,20 +309,29 @@
                   
                 
                 
-  <div id="SOHUCS" sid='https://sjtu-szy.github.io/2021/09/03/%E9%AB%98%E4%B8%AD%E8%AF%AD%E6%96%87%E9%98%85%E8%AF%BB%E7%AD%94%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E6%A8%A1%E6%9D%BF%E9%98%85%E8%AF%BB%E7%AD%94%E9%A2%98%E6%8A%80%E5%B7%A7/'></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      var appid = 'cyvDEHr2F';
-      var conf = '9b18c961fbe425448b8d1aaeff95d251';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
       } else {
-        Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-          window.changyan.api.config({"appid":"cyvDEHr2F","appkey":"9b18c961fbe425448b8d1aaeff95d251"})
-        });
+        schema = light;
       }
-    });
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'sjtu-szy/blog-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

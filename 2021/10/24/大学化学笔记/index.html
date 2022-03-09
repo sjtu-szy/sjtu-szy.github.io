@@ -53,6 +53,10 @@
 
 <!-- 自定义样式保持在最底部 -->
 
+  
+<link rel="stylesheet" href="/css/myiconfont.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -185,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      1.9k 字
     </span>
   
 
@@ -195,7 +199,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      23
        分钟
     </span>
   
@@ -293,9 +297,9 @@
 <li>气体物质的标准状态指在<strong>分压</strong>为$100kPa(p^{\theta})$、具有理想气体行为的<strong>纯</strong>气体</li>
 <li>固体和液体的标准状态分别为$p^{\theta}$下的<strong>纯</strong>固体和<strong>纯</strong>液体</li>
 <li>溶液中的溶质A，其标准状态为$p^{\theta}$下质量摩尔浓度$m_A=1mol \cdot kg^{-1}$，水溶液中通常近似为$c_A=1mol\cdot dm^{-3}$</li>
-<li>反应焓变$\Delta_{\mathrm{r}} \mathrm{H}_{\mathrm{m}}^{\theta}(\mathrm{T})$</li>
-<li>标准生成焓$\Delta_{\mathrm{f}} \mathrm{H}_{\mathrm{m}}^{\theta}(\mathrm{T})$</li>
-<li>燃烧焓$\Delta_{\mathrm{c}} \mathrm{H}_{\mathrm{m}}^{\theta}(\mathrm{T})$</li>
+<li>反应焓变$\Delta_{\mathrm{r}} \mathrm{H}_{\mathrm{m}}^{\theta}(\mathrm{T})$ （=生成焓的生成物-反应物；或者燃烧焓的反应物-生成物）</li>
+<li>标准生成焓$\Delta_{\mathrm{f}} \mathrm{H}_{\mathrm{m}}^{\theta}(\mathrm{T})$ </li>
+<li>燃烧焓$\Delta_{\mathrm{c}} \mathrm{H}_{\mathrm{m}}^{\theta}(\mathrm{T})$ </li>
 </ul>
 </li>
 </ul>
@@ -303,7 +307,7 @@
 <li>自发过程：</li>
 <li>一切自发过程的逆过程都是非自发的。</li>
 <li>热力学第二定律：</li>
-<li>标准摩尔熵变（$\Delta_{\mathrm{r}} \mathrm{S}_{\mathrm{m}}^{\theta}(\mathrm{T}$)，单位$J\cdot mol^{-1}\cdot K^{-1}$）</li>
+<li>标准摩尔熵变（$\Delta_{\mathrm{r}} \mathrm{S}_{\mathrm{m}}^{\theta}(\mathrm{T}$)，熵的生成物-反应物，单位$J\cdot mol^{-1}\cdot K^{-1}$）</li>
 <li>$\Delta S$在数值上为恒温、可逆过程中体系吸收的能量$Q_r$与热传递时温度的比值，即<script type="math/tex; mode=display">
 \Delta S=\frac{Q_r}{T}</script></li>
 <li>熵增原理</li>
@@ -329,6 +333,8 @@
 </li>
 <li>$\Delta_{\mathrm{r}} \mathrm{G}_{\mathrm{m}}=\Delta_{\mathrm{r}} \mathrm{G}_{\mathrm{m}}^{\theta}+RT\ln{Q}$</li>
 <li>$\Delta_{\mathrm{r}} \mathrm{G}_{\mathrm{m}}^{\theta}=-RT\ln{K^{\theta}}$</li>
+<li>$\Delta_{\mathrm{r}} G_{\mathrm{m}}=R T \ln \left(\frac{Q}{K^{\ominus}}\right)$</li>
+<li>$\ln \left(\frac{K_{2}^{\ominus}}{K_{1}^{\ominus}}\right)=\frac{\Delta_{\mathrm{r}} H_{\mathrm{m}}^{\ominus}}{R} \cdot \frac{T_{2}-T_{1}}{T_{1} T_{2}}$</li>
 <li><strong>混淆分析</strong><br>Q：吉布斯自由能变和标准吉布斯自由能变的区别在哪里？<br>A：在化学反应中,标准吉布斯自由能是指<strong>所有反应物和产物都是1mol/L,若是气体则都是100kPa下的吉布斯自由能变</strong>,它只是温度的函数,而当温度一定时,它的值就定了。而吉布斯自由能变则是指任意状态下,反应物和产物的浓度都不定,压力也都不定,<strong>代表化学反应进行到任意程度,它的值决定化学反应的方向</strong>。所以标准摩尔吉布斯自由能变只是一个唯一点；而吉布斯自由能变则是变化中的任意点。</li>
 <li>化学反应速率<ul>
 <li>活化能</li>
@@ -403,6 +409,25 @@
 </li>
 </ul>
 </li>
+<li><p>酸碱理论的发展</p>
+<ul>
+<li>阿伦尼乌斯的电离理论</li>
+<li>酸碱质子理论</li>
+<li>酸碱电子理论</li>
+</ul>
+</li>
+<li><p>稀释定律：氢离子浓度等于根号kc</p>
+<ul>
+<li>条件：$c K_{\mathrm{a}_{1}} \geqslant 20 K_{\mathrm{w}}, \frac{c}{K_{\mathrm{a}_{1}}} \geqslant 500, \frac{2 K_{\mathrm{a}_{2}}}{\sqrt{c K_{\mathrm{a}_{1}}}} \ll 1$</li>
+</ul>
+</li>
+<li>缓冲溶液<ul>
+<li>$\left[\mathrm{H}^{+}\right]=K_{\mathrm{a}} \frac{c_{\mathrm{HA}}}{c_{\mathrm{A}^{-}}}$</li>
+<li>$\mathrm{pH}=p K_{\mathrm{a}}+\lg \frac{c_{\mathrm{A}^{-}}}{c_{\mathrm{HA}}}$</li>
+<li><img src="https://i.loli.net/2021/10/30/1MqwbCO6HpnR3L7.jpg" srcset="/img/loading.gif" lazyload alt=""></li>
+<li><img src="https://i.loli.net/2021/10/30/XmsYxqJdDogUO5F.jpg" srcset="/img/loading.gif" lazyload alt=""></li>
+</ul>
+</li>
 </ul>
 
             </div>
@@ -444,9 +469,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2099/01/01/%E5%85%B3%E4%BA%8E%E6%88%91/">
+                      <a href="/2021/12/13/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【置顶】我的高中学习碎碎念</span>
+                        <span class="hidden-mobile">高中数学笔记(持续更新中……)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -454,8 +479,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/10/17/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">
-                        <span class="hidden-mobile">线代笔记整理（部分）</span>
+                      <a href="/2021/09/03/%E9%AB%98%E4%B8%AD%E8%AF%AD%E6%96%87%E9%98%85%E8%AF%BB%E7%AD%94%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E6%A8%A1%E6%9D%BF%E9%98%85%E8%AF%BB%E7%AD%94%E9%A2%98%E6%8A%80%E5%B7%A7/">
+                        <span class="hidden-mobile">高中语文阅读答题公式及模板阅读答题技巧</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -472,20 +497,29 @@
                   
                 
                 
-  <div id="SOHUCS" sid='https://sjtu-szy.github.io/2021/10/24/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6%E7%AC%94%E8%AE%B0/'></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      var appid = 'cyvDEHr2F';
-      var conf = '9b18c961fbe425448b8d1aaeff95d251';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
       } else {
-        Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-          window.changyan.api.config({"appid":"cyvDEHr2F","appkey":"9b18c961fbe425448b8d1aaeff95d251"})
-        });
+        schema = light;
       }
-    });
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'sjtu-szy/blog-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 
